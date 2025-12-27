@@ -46,3 +46,6 @@ The gnomes of the Neighborhood are a *mysterious* bunch. Each one we encountered
 
 These seven gnomes each played their part in Frosty's plan. Their nonsense may have been confusing, but their role in the story was clear!
 
+<div class="nav-buttons">
+  <a href="/" class="nav-button nav-left">← Back to Home</a>
+</div>
