@@ -1,0 +1,2133 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Michelle "Aeronique" Duell">
+      
+      
+        <link rel="canonical" href="https://hhc2025.aerobytes.io/objectives/o24/">
+      
+      
+        <link rel="prev" href="../o23/">
+      
+      
+        <link rel="next" href="../o25/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/misc/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>On the Wire - SANS Holiday Hack Challenge 2025 Write-Up</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-header__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SANS Holiday Hack Challenge 2025 Write-Up
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              On the Wire
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-nav__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    SANS Holiday Hack Challenge 2025 Write-Up
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objectives
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Objectives
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Holiday Hack Orientation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    It's All About Defang
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neighborhood Watch Bypass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Santa's Gift-Tracking Service Port Mystery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Networking Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Firewall Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to Nmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blob Storage Challenge in the Neighborhood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spare Key
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Open Door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Owner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retro Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mail Detective
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDORable Bistro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosis Network Down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rogue Gnome Identity Provider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantgnome Leap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Going in Reverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome Tea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hack-a-Gnome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowcat RCE & Priv Esc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schrödinger's Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find and Shutdown Frosty's Snowglobe Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On the Wire
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On the Wire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Ski
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Final Showdown
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Final Showdown
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowblind Ambush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extras
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extras
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gnomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet the Gnomes!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easter_eggs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easter Egg of DOOM!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>On the Wire</h1>
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
+<p><img alt="First screenshot" src="../../img/objectives/o24/map_o24.png" /></p>
+<p>Help <strong>Evan</strong> next to <strong>city hall</strong> hack this gnome and retrieve the temperature value reported by the I²C device at address 0x3C. The temperature data is XOR-encrypted, so you’ll need to work through each communication stage to uncover the necessary keys. Start with the unencrypted data being transmitted over the 1-wire protocol.</p>
+<p><img src="/img/objectives/o24/hi_evan.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Evan"></p>
+<div class="admonition quote">
+<p class="admonition-title">Evan</p>
+<p>Hey, I'm Evan!</p>
+<p>I like to build things.</p>
+<p>All sorts of things.</p>
+<p>If you aren't failing on some front, consider adjusting your difficulty settings.</p>
+</div>
+<div style="clear: both;"></div>
+
+<div class="admonition quote">
+<p class="admonition-title">Evan</p>
+<p>So here's the deal - there are some seriously bizarre signals floating around this area.</p>
+<p>Not your typical radio chatter or WiFi noise, but something... different.</p>
+<p>I've been trying to make sense of the patterns, but it's like trying to build a robot hand out of a coffee maker - you need the right approach.</p>
+<p>Think you can help me decode whatever weirdness is being transmitted out there?</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="example">
+<summary>Protocols</summary>
+<p><strong>Key concept - Clock vs. Data signals:</strong></p>
+<ul>
+<li>Some protocols have separate clock and data lines (like SPI and I2C)</li>
+<li>For clocked protocols, you need to sample the data line at specific moments defined by the clock</li>
+<li>The clock signal tells you when to read the data signal</li>
+</ul>
+<p><strong>For 1-Wire (no separate clock):</strong></p>
+<ul>
+<li>Information is encoded in pulse widths (how long the signal stays low or high)</li>
+<li>Different pulse widths represent different bit values</li>
+<li>Look for patterns in the timing between transitions</li>
+</ul>
+<p><strong>For SPI and I2C:</strong></p>
+<ul>
+<li>Identify which line is the clock (SCL for I2C, SCK for SPI)</li>
+<li>Data is typically valid/stable when the clock is in a specific state (high or low)</li>
+<li>You need to detect clock edges (transitions) and sample data at those moments</li>
+</ul>
+<p><strong>Technical approach:</strong></p>
+<ul>
+<li>Sort frames by timestamp</li>
+<li>Detect rising edges (0→1) and falling edges (1→0) on the clock line</li>
+<li>Sample the data line's value at each clock edge</li>
+</ul>
+</details>
+<details class="example">
+<summary>Structure</summary>
+<p><strong>What you're dealing with:</strong></p>
+<ul>
+<li>You have access to WebSocket endpoints that stream digital signal data</li>
+<li>Each endpoint represents a physical wire in a hardware communication system</li>
+<li>The data comes as JSON frames with three properties: line (wire name), t (timestamp), and v (value: 0 or 1)</li>
+<li>The server continuously broadcasts signal data in a loop - you can connect at any time</li>
+<li>This is a multi-stage challenge where solving one stage reveals information needed for the next</li>
+</ul>
+<p><strong>Where to start:</strong></p>
+<ul>
+<li>Connect to a WebSocket endpoint and observe the data format</li>
+<li>The server automatically sends data every few seconds - just wait and collect</li>
+<li>Look for documentation on the protocol types mentioned (1-Wire, SPI, I2C)</li>
+<li>Consider that hardware protocols encode information in the timing and sequence of signal transitions, not just the values themselves</li>
+<li>Consider capturing the WebSocket frames to a file so you can work offline</li>
+</ul>
+</details>
+<details class="example">
+<summary>On Rails</summary>
+<p><strong>Stage-by-stage approach</strong></p>
+<p>Stage 1</p>
+<ol>
+<li>Connect to the captured wire files or endpoints for the relevant wires.</li>
+<li>Collect all frames for the transmission (buffer until inactivity or loop boundary).</li>
+<li>Identify protocol from wire names (e.g., <code>dq</code> → 1-Wire; <code>mosi/sck</code> → SPI; <code>sda/scl</code> → I²C).</li>
+<li>Decode the raw signal:<ul>
+<li>Pulse-width protocols: locate falling→rising transitions and measure low-pulse width.</li>
+<li>Clocked protocols: detect clock edges and sample the data line at the specified sampling phase. </li>
+</ul>
+</li>
+<li>Assemble bits into bytes taking the correct bit order (LSB vs MSB)</li>
+<li>Convert bytes to text (printable ASCII or hex as appropriate).</li>
+<li>Extract information from the decoded output — it contains the XOR key or other hints for the next stage.</li>
+</ol>
+<p>Stage 2</p>
+<ol>
+<li>Repeat Stage 1 decoding to recover raw bytes (they will appear random).</li>
+<li>Apply XOR decryption using the key obtained from the previous stage.</li>
+<li>Inspect decrypted output for next-stage keys or target device information.</li>
+</ol>
+<p>I²C-Specific Notes</p>
+<ul>
+<li>Multiple 7-bit device addresses share the same SDA/SCL lines.</li>
+<li>START condition: SDA falls while SCL is high. STOP: SDA rises while SCL is high.</li>
+<li>First byte of a transaction = (7-bit address &lt;&lt; 1) | R/W. Extract address with <code>address = first_byte &gt;&gt; 1</code>    </li>
+<li>Identify and decode every device’s transactions; decrypt only the target device’s payload</li>
+<li>Print bytes in hex and as ASCII (if printable) — hex patterns reveal structure.</li>
+<li>Check printable ASCII range (0x20–0x7E) to spot valid text.</li>
+<li>Verify endianness: swapping LSB/MSB will quickly break readable text  </li>
+<li>For XOR keys, test short candidate keys and look for common English words </li>
+<li>If you connect mid-broadcast, wait for the next loop or detect a reset/loop marker before decoding</li>
+<li>Buffering heuristic: treat the stream complete after a short inactivity window (e.g., 500 ms) or after a full broadcast loop.</li>
+<li>Sort frames by timestamp per wire and collapse consecutive identical levels before decoding to align with the physical waveform.</li>
+</ul>
+</details>
+<details class="example">
+<summary>Garbage?</summary>
+<p><strong>If your decoded data looks like gibberish:</strong></p>
+<ul>
+<li>The data may be encrypted with XOR cipher</li>
+<li>XOR is a simple encryption: <code>encrypted_byte XOR key_byte = plaintext_byte</code></li>
+<li>The same operation both encrypts and decrypts: <code>plaintext XOR key = encrypted, encrypted XOR key = plaintext</code></li>
+</ul>
+<p><strong>How XOR cipher works:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>xorDecrypt<span class="o">(</span>encrypted,<span class="w"> </span>key<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">let</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">(</span><span class="nb">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span>&lt;<span class="w"> </span>encrypted.length<span class="p">;</span><span class="w"> </span>i++<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>const<span class="w"> </span><span class="nv">encryptedChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>encrypted.charCodeAt<span class="o">(</span>i<span class="o">)</span><span class="p">;</span>
+<span class="w">    </span>const<span class="w"> </span><span class="nv">keyChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>key.charCodeAt<span class="o">(</span>i<span class="w"> </span>%<span class="w"> </span>key.length<span class="o">)</span><span class="p">;</span><span class="w">  </span>//<span class="w"> </span>Key<span class="w"> </span>repeats
+<span class="w">    </span><span class="nv">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>String.fromCharCode<span class="o">(</span>encryptedChar<span class="w"> </span>^<span class="w"> </span>keyChar<span class="o">)</span><span class="p">;</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span>result<span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li>The key is typically short and repeats for the length of the message</li>
+<li>You need the correct key to decrypt (look for keys in previous stage messages)</li>
+<li>If you see readable words mixed with garbage, you might have the wrong key or bit order</li>
+</ul>
+<p><strong>Testing your decryption:</strong></p>
+<ul>
+<li>Encrypted data will have random-looking byte values</li>
+<li>Decrypted data should be readable ASCII text</li>
+<li>Try different keys from messages you've already decoded</li>
+</ul>
+</details>
+<details class="example">
+<summary>Bits and Bytes</summary>
+<p><strong>Critical detail - Bit ordering varies by protocol:</strong></p>
+<p><strong>MSB-first (Most Significant Bit first):</strong></p>
+<ul>
+<li>SPI and I2C typically send the highest bit (bit 7) first</li>
+<li>When assembling bytes: <code>byte = (byte &lt;&lt; 1) | bit_value</code></li>
+<li>Start with an empty byte, shift left, add the new bit</li>
+</ul>
+<p><strong>LSB-first (Least Significant Bit first):</strong></p>
+<ul>
+<li>1-Wire and UART send the lowest bit (bit 0) first</li>
+<li>When assembling bytes: <code>byte |= bit_value &lt;&lt; bit_position</code></li>
+<li>Build the byte from bit 0 to bit 7</li>
+</ul>
+<p><strong>I2C specific considerations:</strong></p>
+<ul>
+<li>Every 9th bit is an ACK (acknowledgment) bit - ignore these when decoding data</li>
+<li>The first byte in each transaction is the device address (7 bits) plus a R/W bit</li>
+<li>You may need to filter for specific device addresses</li>
+</ul>
+<p><strong>Converting bytes to text:</strong></p>
+<p><code>String.fromCharCode(byte_value)  // Converts byte to ASCII character</code></p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<h3 id="evans-electric-pulse-puzzle">Evan's Electric Pulse Puzzle<a class="headerlink" href="#evans-electric-pulse-puzzle" title="Permanent link">⚓︎</a></h3>
+<p>This challenge is different from most CTF objectives. We're implementing protocol decoders from scratch based on hardware communication specs. Pure protocol analysis! The hints tell us which protocols are in use (1-Wire, SPI, I²C), and our job is to read the specs, understand how they work, and write code that correctly decodes the raw signal data! Easy, right? <em>Right?</em></p>
+<h3 id="capturing-the-signal-data">Capturing the Signal Data<a class="headerlink" href="#capturing-the-signal-data" title="Permanent link">⚓︎</a></h3>
+<p>The challenge <a href="https://signals.holidayhackchallenge.com/">site</a> provides WebSocket endpoints streaming live signal data. Each wire name corresponds to a protocol signal line: <code>dq</code> (1-Wire data), <code>sck</code> (SPI clock), <code>mosi</code> (SPI master out), <code>sda</code> (I²C data), and <code>scl</code> (I²C clock).</p>
+<p>We used <code>wscat</code> (a WebSocket client) to connect and capture data. For reference, WebSocket is defined in <a href="https://www.rfc-editor.org/rfc/rfc6455">RFC 6455</a>.</p>
+<p>Working with captured files is much easier for debugging than live streams. The data loops every ~2 seconds, so a 30-second capture provides approximately 15 complete loops. This repetition is helpful for debugging: if our decoder produces different results for the same data in different loops, we know something's wrong with our implementation (ask me how many times my implementation was wrong...):</p>
+<div class="admonition info">
+<p class="admonition-title">WebSocket Capture Commands</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>wscat<span class="w"> </span>
+
+<span class="w">    </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>wscat<span class="w"> </span>-c<span class="w"> </span>wss://signals.holidayhackchallenge.com/wire/dq<span class="w"> </span>&gt;<span class="w"> </span>dq_capture.json<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>wscat<span class="w"> </span>-c<span class="w"> </span>wss://signals.holidayhackchallenge.com/wire/sck<span class="w"> </span>&gt;<span class="w"> </span>sck_capture.json<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>wscat<span class="w"> </span>-c<span class="w"> </span>wss://signals.holidayhackchallenge.com/wire/mosi<span class="w"> </span>&gt;<span class="w"> </span>mosi_capture.json<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>wscat<span class="w"> </span>-c<span class="w"> </span>wss://signals.holidayhackchallenge.com/wire/sda<span class="w"> </span>&gt;<span class="w"> </span>sda_capture.json<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="w">    </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>wscat<span class="w"> </span>-c<span class="w"> </span>wss://signals.holidayhackchallenge.com/wire/scl<span class="w"> </span>&gt;<span class="w"> </span>scl_capture.json<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+</div>
+<p>The data format is JSON with three fields per frame: <code>line</code> (wire name), <code>t</code> (timestamp in microseconds), and <code>v</code> (voltage level: 0 or 1). Many frames also include a <code>marker</code> field that identifies what each bit represents:</p>
+<ul>
+<li><strong>1-Wire markers:</strong> <code>"idle"</code>, <code>"reset"</code>, <code>"presence"</code></li>
+<li><strong>SPI markers:</strong> <code>"data-bit"</code> marks each transmitted bit on MOSI</li>
+<li><strong>I²C markers:</strong> <code>"start"</code>, <code>"address-bit"</code>, <code>"data-bit"</code>, <code>"ack-bit"</code>, <code>"stop"</code></li>
+</ul>
+<p>The challenge is helping us decode by marking protocol elements. Real hardware analysis would require determining all these timing conditions ourselves by analyzing the signal edges. The gnomes left us some breadcrumbs...and we're <em>thankful</em> for the mess! 🍞</p>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s1.png" /></p>
+<hr />
+<h3 id="decoding-the-dq-wire">Decoding the DQ Wire<a class="headerlink" href="#decoding-the-dq-wire" title="Permanent link">⚓︎</a></h3>
+<p>The <code>dq</code> wire is 1-Wire protocol. Unlike SPI or I²C with separate clock lines, 1-Wire does everything on a single wire. It's the minimalist's dream! Information gets encoded in pulse widths: <code>short pulse = 1</code>, <code>long pulse = 0</code>.</p>
+<p>The 1-Wire protocol was originally developed by Dallas Semiconductor (now part of Analog Devices). The <a href="https://www.analog.com/en/technical-articles/1wire-communication-through-software.html">protocol specification</a> from Analog Devices defines the timing: <code>'1'</code> bits use <code>~6μs</code> pulses, <code>'0'</code> bits use <code>~60μs</code>. The protocol uses LSB-first bit ordering.</p>
+<p>We measured actual pulse widths in our captured data to verify they match the spec:</p>
+<div class="admonition info">
+<p class="admonition-title">Pulse Width Analyzer (pulse_analyzer.py)</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">signals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dq_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;line&#39;</span> <span class="ow">in</span> <span class="n">frame</span><span class="p">:</span>
+                    <span class="n">signals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">signals</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Measuring pulse widths:&quot;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">signals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Low pulse: </span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2">μs&quot;</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+                <span class="k">break</span>
+</code></pre></div>
+</div>
+<p>Running this showed pulse widths clustering around <code>6μs</code> and <code>60μs</code>, confirming the spec. We picked <code>20μ</code>s as the threshold to distinguish between them. This value sits comfortably between the two pulse widths with good margins: <code>14μs</code> above the <code>'1'</code> bit pulse (<code>6μs</code>) and <code>40μs</code> below the <code>'0'</code> bit pulse (<code>60μs</code>). Any value between roughly <code>10-50μs</code> would work as a threshold.</p>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s2.png" /></p>
+<p>The decoder walks through the signal. Anything under <code>20μs</code> is a <code>'1'</code>, everything else is a <code>'0'</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">1-Wire Pulse Decoder (decode_1wire.py)</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">signals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dq_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;line&#39;</span> <span class="ow">in</span> <span class="n">frame</span><span class="p">:</span>
+                    <span class="n">signals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">signals</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">])</span>
+    <span class="n">signals</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">signals</span> <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">700</span><span class="p">]</span>
+
+    <span class="n">bits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">signals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">signals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">]</span>
+            <span class="n">bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">width</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+
+    <span class="n">bytes_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bits</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="n">byte_bits</span> <span class="o">=</span> <span class="n">bits</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="n">byte_val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">)),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">bytes_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte_val</span><span class="p">)</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="mi">32</span> <span class="o">&lt;=</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">127</span> <span class="k">else</span> <span class="s1">&#39;.&#39;</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bytes_data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>1-Wire sends bits LSB first (least significant bit first), which means bytes arrive backwards. The spec tells us this, but it's easy to miss! Our first attempt assembled bytes in arrival order and got garbage. We need to <strong>reverse each group of <code>8</code> bits</strong> before converting to bytes.</p>
+<p>The 1-Wire protocol also starts each transmission with initialization: a reset pulse (<code>~480μs low</code>) followed by a presence pulse (<code>~150μs low</code>) from the device. Our decoder skips the first <code>700μs</code> to avoid these initialization pulses and only process actual data bits. See section 2.1 of the <a href="https://www.analog.com/en/technical-articles/1wire-communication-through-software.html">Analog Devices specification</a> for details on the initialization sequence.</p>
+<p>Running the decoder revealed a repeating message!</p>
+<div class="admonition success">
+<p class="admonition-title">XOR Key Message!</p>
+<p>"read and decrypt the SPI bus data using the XOR key: icy"</p>
+</div>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s3.png" /></p>
+<p>The gnomes are using winter-themed encryption keys, and we wouldn't expect any less from them! ❄️</p>
+<hr />
+<h3 id="cracking-the-icy-spi-stream">Cracking the Icy SPI Stream<a class="headerlink" href="#cracking-the-icy-spi-stream" title="Permanent link">⚓︎</a></h3>
+<p>Armed with the key <strong>"icy"</strong>, we moved to the SPI wires: <code>sck</code> (clock) and <code>mosi</code> (master out, slave in). SPI uses a clock line that tells you when to sample the data line. Much more <em>civilized</em> than 1-Wire's timing shenanigans!</p>
+<p>SPI (Serial Peripheral Interface) was developed by Motorola. There's no single official standard, but the protocol is well documented. Texas Instruments provides an excellent <a href="https://www.ti.com/lit/an/slva704/slva704.pdf">SPI overview (SLVA704)</a>, and Analog Devices has a detailed <a href="https://www.analog.com/en/analog-dialogue/articles/introduction-to-spi-interface.html">Introduction to SPI Interface</a>. Data transmission is clock-synchronized: you sample the data line on clock edges.</p>
+<p>We grabbed MOSI values at each clock sample and assembled them into bytes. SPI can transmit MSB-first (most significant bit first) or LSB-first depending on device configuration. We tried both orderings: MSB-first assembly (where bits are read high-to-low, bit <code>7</code> through bit <code>0</code>) produced readable text after XOR decryption. LSB-first gave garbage, confirming this device uses MSB-first transmission.</p>
+<p>The challenge marks each data bit on the MOSI wire with a <code>data-bit</code> marker, making it straightforward to extract the bit stream in transmission order.</p>
+<p>Running the SPI decoder without XOR shows the raw encrypted bytes:</p>
+<div class="admonition info">
+<p class="admonition-title">SPI Decoder (No XOR Yet)</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">mosi_bits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mosi_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;marker&#39;</span> <span class="ow">in</span> <span class="n">frame</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;data-bit&#39;</span><span class="p">:</span>
+                    <span class="n">mosi_bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">bytes_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mosi_bits</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="n">byte_bits</span> <span class="o">=</span> <span class="n">mosi_bits</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="n">byte_val</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+            <span class="n">bytes_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte_val</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raw bytes (hex):&quot;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s1">02x</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bytes_data</span><span class="p">[:</span><span class="mi">50</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;As ASCII:&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="mi">32</span> <span class="o">&lt;=</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">127</span> <span class="k">else</span> <span class="s1">&#39;.&#39;</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">bytes_data</span><span class="p">[:</span><span class="mi">50</span><span class="p">]))</span>
+</code></pre></div>
+</div>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s4.png" /></p>
+<p>The output shows random hex bytes that don't decode to readable ASCII. Exactly what encrypted data should look like!</p>
+<p>The <em>classic</em> XOR cipher is beautifully simple: repeat a short key across the message with <code>plaintext[i] = encrypted[i] XOR key[i % keylen]</code>. Same operation for encryption and decryption. It's symmetric!</p>
+<p>Applying the XOR key <code>"icy"</code> (from the 1-Wire message) to the encrypted SPI bytes reveals the plaintext:</p>
+<div class="admonition info">
+<p class="admonition-title">SPI Decoder with XOR</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">mosi_bits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mosi_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;marker&#39;</span> <span class="ow">in</span> <span class="n">frame</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;data-bit&#39;</span><span class="p">:</span>
+                    <span class="n">mosi_bits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">])</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">bytes_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mosi_bits</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="n">byte_bits</span> <span class="o">=</span> <span class="n">mosi_bits</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="n">byte_val</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+            <span class="n">bytes_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte_val</span><span class="p">)</span>
+
+    <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;icy&quot;</span>
+    <span class="n">decrypted</span> <span class="o">=</span> <span class="p">[</span><span class="n">bytes_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bytes_data</span><span class="p">))]</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">decrypted</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s5.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Next XOR Key and Target Sensor Address!</p>
+<p>Next XOR key: "bananza". Target sensor: I²C address 0x3C.</p>
+</div>
+<hr />
+<h3 id="the-i2c-party-bus">The I²C Party Bus<a class="headerlink" href="#the-i2c-party-bus" title="Permanent link">⚓︎</a></h3>
+<p>I²C has multiple devices sharing two wires (<code>sda</code> for data, <code>scl</code> for clock). Each device has a unique 7-bit address. It's a shared bus where everyone takes turns talking!</p>
+<p>The I²C specification is maintained by NXP Semiconductors (who invented the protocol). The official <a href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">I²C-bus specification (UM10204)</a> defines the complete protocol. Here's some neat concepts:</p>
+<ol>
+<li><strong>START condition:</strong> SDA drops low while SCL is high (begins a transaction)</li>
+<li><strong>Address byte:</strong> First byte after START is <code>(7-bit address &lt;&lt; 1) | R/W bit</code></li>
+<li><strong>ACK bits:</strong> Every 9th bit is acknowledgment (we ignore these for data decoding)</li>
+<li><strong>Data bytes:</strong> MSB-first, <code>8</code> bits each, followed by ACK</li>
+<li><strong>STOP condition:</strong> SDA rises while SCL is high (ends a transaction)</li>
+</ol>
+<p>Transactions start with a START condition (SDA drops low while SCL is high). The first byte after START contains the device address (7 bits) plus a read/write bit in the LSB position. To extract the <code>7</code>-bit address, we right-shift by one position: <code>address = first_byte &gt;&gt; 1</code>. For example, if the first byte is <code>0x78</code>, the device address is <code>0x78 &gt;&gt; 1 = 0x3C</code>.</p>
+<p>The challenge marks I²C protocol elements for us: <code>'start'</code> for START conditions, <code>'address-bit'</code> for address bits, and <code>'data-bit'</code> for data bits. This makes decoding straightforward since we don't need to manually detect timing conditions.</p>
+<p>We can detect START conditions by looking for the <code>'start'</code> marker:</p>
+<div class="admonition info">
+<p class="admonition-title">I²C START Detection</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">sda</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sda_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;line&#39;</span> <span class="ow">in</span> <span class="n">frame</span><span class="p">:</span>
+                    <span class="n">sda</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">start_times</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">sda</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;marker&#39;</span> <span class="ow">in</span> <span class="n">frame</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;start&#39;</span><span class="p">:</span>
+            <span class="n">start_times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;START condition at </span><span class="si">{</span><span class="n">frame</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">μs&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">start_times</span><span class="p">)</span><span class="si">}</span><span class="s2"> I²C transactions&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s6.png" /></p>
+<p>Building the I²C decoder required detecting START conditions (using the <code>'start'</code> marker), splitting transactions by START boundaries, extracting address and data bits (using <code>'address-bit'</code> and <code>'data-bit'</code> markers), and assembling bytes MSB-first. Since the data loops every <code>~2</code> seconds and we captured <code>30</code> seconds, each device appears <code>~15</code> times in our capture. To keep the output readable, we show only the first transaction per device address.</p>
+<p>With START detection working, we can build the full decoder to extract device addresses and data!</p>
+<div class="admonition info">
+<p class="admonition-title">I²C Device Discovery</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">sda</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sda_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;line&#39;</span> <span class="ow">in</span> <span class="n">frame</span><span class="p">:</span>
+                    <span class="n">sda</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">start_indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sda</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;marker&#39;</span> <span class="ow">in</span> <span class="n">frame</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;start&#39;</span><span class="p">:</span>
+            <span class="n">start_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="n">devices</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">start_indices</span><span class="p">)):</span>
+        <span class="n">start_idx</span> <span class="o">=</span> <span class="n">start_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">end_idx</span> <span class="o">=</span> <span class="n">start_indices</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">start_indices</span><span class="p">)</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">sda</span><span class="p">)</span>
+
+        <span class="n">transaction</span> <span class="o">=</span> <span class="n">sda</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">]</span>
+
+        <span class="n">addr_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">transaction</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;address-bit&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">addr_bits</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">addr_byte</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">addr_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">device_addr</span> <span class="o">=</span> <span class="n">addr_byte</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">device_addr</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">data_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">transaction</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;data-bit&#39;</span><span class="p">]</span>
+
+        <span class="n">data_bytes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_bits</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_bits</span><span class="p">):</span>
+                <span class="n">byte_bits</span> <span class="o">=</span> <span class="n">data_bits</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+                <span class="n">byte_val</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">k</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+                <span class="n">data_bytes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte_val</span><span class="p">)</span>
+
+        <span class="n">devices</span><span class="p">[</span><span class="n">device_addr</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_bytes</span>
+
+    <span class="k">for</span> <span class="n">addr</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">devices</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">ascii_data</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">if</span> <span class="mi">32</span> <span class="o">&lt;=</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">127</span> <span class="k">else</span> <span class="s1">&#39;.&#39;</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device 0x</span><span class="si">{</span><span class="n">addr</span><span class="si">:</span><span class="s2">02X</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">ascii_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>The decoder found four active devices chatting away on the shared bus:</p>
+<ul>
+<li><strong>0x29:</strong> Sensor data (plaintext)</li>
+<li><strong>0x3C:</strong> Temperature sensor (encrypted with XOR)</li>
+<li><strong>0x48:</strong> Sensor data (plaintext)</li>
+<li><strong>0x51:</strong> Sensor data (plaintext)</li>
+</ul>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s7.png" /></p>
+<p>Only device <em>0x3C</em>'s data was encrypted. The others transmitted in plaintext, which was handy for verifying our decoder worked before tackling the XOR challenge!</p>
+<p>Each byte in I²C is 8 data bits followed by an ACK (acknowledge) bit. The challenge marks data bits with <code>'data-bit'</code> and ACK bits with <code>'ack-bit'</code>, so we simply filter for data bits and skip ACKs during decoding. Data bits are transmitted MSB first (most significant bit first), as specified in section 3.1.3 of <a href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">NXP's I²C specification (UM10204)</a>.</p>
+<p>The full decoder handles all the transaction parsing, address extraction, and XOR decryption:</p>
+<div class="admonition info">
+<p class="admonition-title">I²C Transaction Parser</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+    <span class="n">sda</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sda_capture.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;line&#39;</span> <span class="ow">in</span> <span class="n">frame</span><span class="p">:</span>
+                    <span class="n">sda</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="n">start_indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sda</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;marker&#39;</span> <span class="ow">in</span> <span class="n">frame</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;start&#39;</span><span class="p">:</span>
+            <span class="n">start_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="n">devices</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">start_indices</span><span class="p">)):</span>
+        <span class="n">start_idx</span> <span class="o">=</span> <span class="n">start_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">end_idx</span> <span class="o">=</span> <span class="n">start_indices</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">start_indices</span><span class="p">)</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">sda</span><span class="p">)</span>
+
+        <span class="n">transaction</span> <span class="o">=</span> <span class="n">sda</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">]</span>
+
+        <span class="n">addr_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">transaction</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;address-bit&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">addr_bits</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">addr_byte</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">addr_bits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">device_addr</span> <span class="o">=</span> <span class="n">addr_byte</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">device_addr</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">data_bits</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">transaction</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marker&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;data-bit&#39;</span><span class="p">]</span>
+
+        <span class="n">data_bytes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_bits</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_bits</span><span class="p">):</span>
+                <span class="n">byte_bits</span> <span class="o">=</span> <span class="n">data_bits</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+                <span class="n">byte_val</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">byte_bits</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">7</span><span class="o">-</span><span class="n">k</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+                <span class="n">data_bytes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte_val</span><span class="p">)</span>
+
+        <span class="n">devices</span><span class="p">[</span><span class="n">device_addr</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_bytes</span>
+
+    <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;bananza&quot;</span>
+    <span class="k">if</span> <span class="mh">0x3C</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">devices</span><span class="p">[</span><span class="mh">0x3C</span><span class="p">]</span>
+        <span class="n">decrypted</span> <span class="o">=</span> <span class="p">[</span><span class="n">target</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">target</span><span class="p">))]</span>
+        <span class="n">devices</span><span class="p">[</span><span class="mh">0x3C</span><span class="p">]</span> <span class="o">=</span> <span class="n">decrypted</span>
+
+    <span class="k">for</span> <span class="n">addr</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">devices</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0x</span><span class="si">{</span><span class="n">addr</span><span class="si">:</span><span class="s2">02X</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Running the decoder with XOR key <code>"bananza"</code> on device <code>0x3C</code> gives us the clean output:</p>
+<p><code>32.84</code> degrees</p>
+<p><img alt="First screenshot" src="../../img/objectives/o24/s8.png" /></p>
+<p>That's just above freezing! The gnomes' temperature sensor is reporting cold conditions! ⛄</p>
+<div class="admonition success">
+<p class="admonition-title">Optimal Temperature!</p>
+<p>32.84</p>
+</div>
+<p>Three protocols, three decoders built from specs, two XOR keys, and four chatty sensors later, we've decoded the temperature from Evan's signals!</p>
+<p>The gnomes built a complete IoT weather station with layered XOR encryption and multiple communication protocols! Leave it to the gnomes to over-engineer...maybe someone should tell them about MQTT...🌡️❄️</p>
+<div class="nav-buttons">
+  <a href="/objectives/o23" class="nav-button nav-left">← Find and Shutdown Frosty's Snowglobe Machine</a>
+  <a href="/objectives/o25" class="nav-button nav-right">Next: Free Ski →</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/Aeronique" target="_blank" rel="noopener" title="Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Aeronique" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/michelle-duell" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>
