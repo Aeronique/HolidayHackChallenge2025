@@ -221,6 +221,6 @@ Alright, enough talking. Let's go save a neighborhood from an evil snowman! ‚ùÑÔ
     From gnomes to their master, we conquered it all,<br/>
     A whimsical journey, we answered the call!<br/>
 	--------------------
-	Credit: I originally wrote an incredibly lame version of this. AI helped me rhyme with words that actually exist in the dictionary.
+	Credit: I originally wrote an incredibly lame version of this. AI helped me rhyme with words that *actually exist in the dictionary*.
 
 ![Group photo](./img/misc/group_photo.png)
