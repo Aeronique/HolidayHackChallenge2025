@@ -1,4 +1,4 @@
-#❄️⛄ Gnome In Your Home: The Frosty Return ⛄❄️
+#❄️⛄ Revenge of the Gnomes: The Frosty Return ⛄❄️
 
 <script>
 (function() {
