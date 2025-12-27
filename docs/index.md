@@ -88,7 +88,7 @@ Whether you're a fellow cybersecurity newbie like me or a seasoned hacker just h
 
 Picture this: The Counter Hack crew is decking the halls, stringing up lights, and generally being festive when *BAM!* The yard gnomes come to life. And not in a cute, sunshine and rainbows way. More like a "we're taking over your fridge and possibly your *soul*" kind of way.
 
-### *The Backstory**
+### **The Backstory**
 
 Way back in 2015, the mysterious Atnas Corporation almost ruined the entire holiday season through their nefarious Gnome In Your Home plot. Their villainy centered upon convincing parents to purchase little Gnome dolls that played joyful holiday songs to their children. With Gnome sales topping two million units, a blitz of Atnas Corp advertisements encouraged parents to move their Gnomes around the house daily so that their children could hunt for them in a fun little game. Little did parents know that these Gnomes were snooping IoT devices with a camera and wireless internet access, furtively sending photos to burglars who would rob their houses of their treasures en masse on Christmas Eve, 2015. The incredible efforts of SANS Holiday Hack investigators around the world foiled the foul plot, exposing the criminal mastermind behind Atnas Corp: Cindy Lou Who, age 62.
 
