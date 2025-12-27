@@ -1,4 +1,4 @@
-# Easter Egg! 🥚
+# Easter Egg of DOOM! ☠️🥚
 
 <div style="text-align: center;">
   <img src="../img/misc/easteregg.png" alt="Easter Egg" style="width: 400px; height: auto;">
