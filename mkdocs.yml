@@ -1,5 +1,5 @@
 # Reference: https://squidfunk.github.io/mkdocs-material/reference/
-site_name: SANS Holiday Hack Challenge 2025 Writeup
+site_name: SANS Holiday Hack Challenge 2025 Write-Up
 site_url: https://hhc2025.aerobytes.io/
 site_author: Michelle "Aeronique" Duell
 theme:
