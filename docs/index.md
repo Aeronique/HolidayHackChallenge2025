@@ -72,11 +72,13 @@
 
 Hey there! Welcome to my wild *sleigh* ride through the 2025 SANS Holiday Hack Challenge.
 
-I'm currently neck-deep in the SANS Cyber Academy studying for my GCIH, and I decided to tackle this year's Holiday Hack to put my studies into practice and see what I could accomplish. I managed to crack all 26 challenges in the first week, and now I'm here to document the journey with amazingly awful whimsical puns thrown in for good measure.
+I'm currently neck-deep in the SANS Cyber Academy studying for my GCIH, and I decided to tackle this year's Holiday Hack to put my studies into practice and see what I could accomplish. I managed to crack all 26 challenges in the first week, and now I'm here to document the journey with amazingly awful whimsical puns thrown in for good measure. 
 
-This is also my first time building a webpage! Do you see the magical snowflakes?! I'm unreasonably proud of those. My son also mentioned the words "fire" and "gas", which apparently means super cool. I'll take it!
+**Fair warning:** this isn't your typical dry overly technical report. It's written in my voice, along with bad jokes and genuine excitement about solving puzzles and learning new things!
 
-This writeup is part documentation and part "hey look, I actually figured this stuff out!" Check out [Hack-a-Gnome](objectives/o20/), [Frosty's Snowglobe](objectives/o23/) (featuring my first edited video with sound and text on my first YouTube channel - things I'm proud of!), or [Snowblind Ambush](objectives/o26/) if you want to know which challenges tested my skills the most!
+Speaking of new things, this is also my first time building a webpage! Do you see the magical snowflakes?! I'm unreasonably proud of those. My son also mentioned the words "fire" and "gas", which apparently means super cool. I'll take it!
+
+This writeup is part documentation and part "hey look, I actually figured this stuff out!" Check out [Hack-a-Gnome](objectives/o20/), [Frosty's Snowglobe](objectives/o23/) (featuring my first edited video with sound and text on my first YouTube channel), or [Snowblind Ambush](objectives/o26/) if you want to know which challenges tested my skills the most!
 
 Oh, and don't miss [Meet the Gnomes](gnomes.md) to see who we're dealing with (spoiler: most of them only speak gibberish), and the [Easter Egg of DOOM](easter_eggs.md) because one lone egg appearing in a winter challenge feels ominous and I'm not okay with it!
 
