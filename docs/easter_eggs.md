@@ -12,4 +12,6 @@ One might even say this egg could be the *most villainous* character in the enti
 
 Until next year...
 
-
+<div class="nav-buttons">
+  <a href="/" class="nav-button nav-left">← Back to Home</a>
+</div>
