@@ -70,17 +70,15 @@
 
 ## **Introduction**
 
-Hey there! Welcome to my wild "sleigh" ride through the 2025 SANS Holiday Hack Challenge. 
+Hey there! Welcome to my wild *sleigh* ride through the 2025 SANS Holiday Hack Challenge.
 
-I'm currently neck-deep in the SANS Cyber Academy studying for my GCIH, and I decided to tackle this year's Holiday Hack as both a learning exercise and a test of how much my brain can handle before it turns into eggnog. What started as an unintended week-long study break has now become another four weeks of *thorough* report writing. I'm kicking myself for not taking better notes, diagnosing payloads and commands that *mysteriously stopped working* (gnomes are suspected), and crafting amazingly awful whimsical puns that may or may not be relevant but are thrown in for good measure.
+I'm currently neck-deep in the SANS Cyber Academy studying for my GCIH, and I decided to tackle this year's Holiday Hack to put my studies into practice and see what I could accomplish. I managed to crack all 26 challenges in the first week, and now I'm here to document the journey with amazingly awful whimsical puns thrown in for good measure.
 
-This is also my first time building a webpage (this challenge gave me a BUNCH of firsts)! Do you see the magical snowflakes?! I'm unreasonably proud of those. My son also mentioned the words "fire" and "gas", and Google tells me that means super cool. I'll take it!
+This is also my first time building a webpage! Do you see the magical snowflakes?! I'm unreasonably proud of those. My son also mentioned the words "fire" and "gas", which apparently means super cool. I'll take it!
 
-Spoiler alert: I somehow managed to crack all 26 challenges in the first week. My sleep schedule still hasn't forgiven me, but my family is definitely proud (and relieved) that I finished!
+This writeup is part documentation and part "hey look, I actually figured this stuff out!" Check out [Hack-a-Gnome](objectives/o20/), [Frosty's Snowglobe](objectives/o23/) (featuring my first edited video with sound and text on my first YouTube channel - things I'm proud of!), or [Snowblind Ambush](objectives/o26/) if you want to know which challenges tested my skills the most!
 
-This writeup is part documentation and part "hey look, I actually figured this stuff out!" Check out [Hack-a-Gnome](objectives/o20.md), [Frosty's Snowglobe](objectives/o23.md) (featuring my first edited video with sound and text on my first YouTube channel - things I'm proud of!), or [Snowblind Ambush](objectives/o26.md) if you want to know which challenges made me question my sanity and my life choices!
-
-Oh, and don't miss [Meet the Gnomes](gnomes.md) to see who we're dealing with (spoiler: most of them only speak gibberish), and the [Easter Egg of Doom](easter_eggs.md) because one lone egg appearing in a winter challenge feels ominous and I'm not okay with it!
+Oh, and don't miss [Meet the Gnomes](gnomes.md) to see who we're dealing with (spoiler: most of them only speak gibberish), and the [Easter Egg of DOOM](easter_eggs.md) because one lone egg appearing in a winter challenge feels ominous and I'm not okay with it!
 
 Whether you're a fellow cybersecurity newbie like me or a seasoned hacker just here for the fun, grab some hot cocoa, cozy up by the fireplace, and settle in for a different kind of holiday story. (Like Die Hard, but with...well..you'll see...)
 
