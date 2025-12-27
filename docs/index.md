@@ -80,7 +80,7 @@ Speaking of new things, this is also my first time building a webpage! Do you se
 
 This writeup is part documentation and part "hey look, I actually figured this stuff out!" Check out [Hack-a-Gnome](objectives/o20/), [Frosty's Snowglobe](objectives/o23/) (featuring my first edited video with sound and text on my first YouTube channel), or [Snowblind Ambush](objectives/o26/) if you want to know which challenges tested my skills the most!
 
-Oh, and don't miss [Meet the Gnomes](gnomes.md) to see who we're dealing with (spoiler: most of them only speak gibberish), and the [Easter Egg of DOOM](easter_eggs.md) because one lone egg appearing in a winter challenge feels ominous and I'm not okay with it!
+Oh, and don't miss [Meet the Gnomes](gnomes.md) to see who we're dealing with, and the [Easter Egg of DOOM](easter_eggs.md) because one lone egg appearing in a winter challenge feels ominous and I'm not okay with it!
 
 Whether you're a fellow cybersecurity newbie like me or a seasoned hacker just here for the fun, grab some hot cocoa, cozy up by the fireplace, and settle in for a different kind of holiday story. (Like Die Hard, but with...well..you'll see...)
 
