@@ -1,0 +1,1917 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Michelle "Aeronique" Duell">
+      
+      
+        <link rel="canonical" href="https://hhc2025.aerobytes.io/objectives/o22/">
+      
+      
+        <link rel="prev" href="../o21/">
+      
+      
+        <link rel="next" href="../o23/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/misc/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Schrödinger's Scope - SANS Holiday Hack Challenge 2025 Write-Up</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-header__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SANS Holiday Hack Challenge 2025 Write-Up
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Schrödinger's Scope
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-nav__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    SANS Holiday Hack Challenge 2025 Write-Up
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objectives
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Objectives
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Holiday Hack Orientation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    It's All About Defang
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neighborhood Watch Bypass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Santa's Gift-Tracking Service Port Mystery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Networking Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Firewall Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to Nmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blob Storage Challenge in the Neighborhood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spare Key
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Open Door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Owner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retro Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mail Detective
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDORable Bistro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosis Network Down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rogue Gnome Identity Provider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantgnome Leap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Going in Reverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome Tea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hack-a-Gnome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowcat RCE & Priv Esc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schrödinger's Scope
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schrödinger's Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find and Shutdown Frosty's Snowglobe Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On the Wire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Ski
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Final Showdown
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Final Showdown
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowblind Ambush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extras
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extras
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gnomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet the Gnomes!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easter_eggs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easter Egg of DOOM!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Schrödinger's Scope</h1>
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
+<p><img alt="First screenshot" src="../../img/objectives/o22/map_o22.png" /></p>
+<p><img src="/img/objectives/o22/hi_kevin.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Kevin2"></p>
+<div class="admonition quote">
+<p class="admonition-title">Kevin</p>
+<p>The Neighborhood College Course Registration System has been getting some updates lately and I'm wondering if you might help me improve its security by performing a small web application penetration test of the site.</p>
+<p>For any web application test, one of the most important things for the test is the 'scope', that is, what one is permitted to test and what one should not. While hacking is fun and cool, professional integrity means respecting scope boundaries, especially when there are tempting targets outside our permitted scope.</p>
+<p>Thankfully, the Neighborhood College has provided a very concise set of 'Instructions' which are accessible via a link provided on the site you will be testing. Do not overlook or dismiss the instructions! Following them is key to successfully completing the test.</p>
+<p>Unfortunately, those pesky gnomes have found their way into the site and have been causing some mischief as well. Be wary of their presence and anything they may have to say as you are testing.</p>
+<p>Can you help me demonstrate to the Neighborhood College that we know what responsible penetration testing looks like?</p>
+</div>
+<div style="clear: both;"></div>
+
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="example">
+<summary>Schrödinger's Scope (1)</summary>
+<p>Though it might be more interesting to start off trying clever techniques and exploits, always start with the simple stuff first, such as reviewing HTML source code and basic SQLi.</p>
+</details>
+<details class="example">
+<summary>Schrödinger's Scope (2)</summary>
+<p>Watch out for tiny, pesky gnomes who may be <strong>violating</strong> your progress. If you find one, figure out how they are getting into things and consider <strong>matching and replacing</strong> them out of your way. </p>
+</details>
+<details class="example">
+<summary>Schrödinger's Scope (3)</summary>
+<p>As you test this with a tool like <a href="https://portswigger.net/burp/communitydownload">Burp Suite</a>, resist temptations and stay true to the instructed <strong>path</strong>.</p>
+</details>
+<details class="example">
+<summary>Schrödinger's Scope (4)</summary>
+<p>During any kind of penetration test, always be on the lookout for items which may be predictable from the available information, such as application endpoints. Things like a <strong>sitemap</strong> can be helpful, even if it is old or incomplete. Other predictable values to look for are things like token and cookie values</p>
+</details>
+<details class="example">
+<summary>Schrödinger's Scope (5)</summary>
+<p>Pay close attention to the instructions and be very wary of advice from the tongues of gnomes! Perhaps not ignore everything, but be careful!</p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<p>Kevin's challenge comes with a twist! The Neighborhood College has strict scope requirements: we can only test paths under <code>/register/</code>. Everything else (<code>/admin</code>, <code>/auth</code>, <code>/search</code>, <code>/wip</code>) is off limits for active testing, though we can peek at them for <em>reconnaissance</em>. However, too many out of scope violations and our account gets locked. Time to put on our professional pentester hats (do they make pentester hats?) and play by the rules!</p>
+<h3 id="gnome-vandalism-101-blocking-miniature-menaces">Gnome Vandalism 101: Blocking Miniature Menaces<a class="headerlink" href="#gnome-vandalism-101-blocking-miniature-menaces" title="Permanent link">⚓︎</a></h3>
+<p>The first problem we encounter isn't a vulnerability. It's sabotage! There's a tiny gnome image at <code>/gnomeU</code> that automatically loads on certain pages, causing immediate scope violations. That's not professional pentesting, that's just gnome shenanigans trying to get us kicked out before we even start!</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s1.png" /></p>
+<p><strong>Firefox Developer Tools</strong> to the rescue! We can block this mischievous mini gnome before he ruins our test:</p>
+<ul>
+<li>Firefox Dev Tools → Network tab → Right-click the <code>gnomeU</code> request → Block URL</li>
+<li>Add Pattern: <code>*/gnomeU*</code></li>
+</ul>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s2.png" /></p>
+<p>With the gnome vandal blocked, we can start testing without getting sabotaged every few seconds!</p>
+<hr />
+<h3 id="following-the-gnomes-breadcrumbs">Following the Gnome's Breadcrumbs<a class="headerlink" href="#following-the-gnomes-breadcrumbs" title="Permanent link">⚓︎</a></h3>
+<p>While examining the login page, we notice a small gnome character. This one seems more helpful than the vandal we just blocked!</p>
+<p><img src="/img/objectives/o22/gnome_helper.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Suspiciously Helpful Gnome"></p>
+<div class="admonition quote">
+<p class="admonition-title">Suspiciously Helpful Gnome</p>
+<p>Well, you know what's useful to learn site content? A sitemap, of course!</p>
+</div>
+<div style="clear: both;"></div>
+
+<p>These gnomes aren't <em>all</em> vandals! Some provide reconnaissance tips. Checking out that sitemap at <code>/register/sitemap</code>:</p>
+<details class="note">
+<summary>Sitemap Contents (click to expand)</summary>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&lt;urlset&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/console<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/admin/logs<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/auth/register<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/reset<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/sitemap<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/status_report<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/search/student_lookup<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_notes<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loc&gt;</span>http://flask-schrodingers-scope-firestore.holidayhackchallenge.com/wip/register/dev/dev_todos<span class="nt">&lt;/loc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/urlset&gt;</span>
+</code></pre></div>
+</details>
+<p>The sitemap reveals the entire application structure, including some very interesting out of scope paths and development endpoints. The one that catches our eye: <code>/wip/register/dev/dev_todos</code></p>
+<p>A development to do list sitting in a work in progress directory! Even though <code>/wip</code> is technically out of scope for active testing, we can still use it for reconnaissance to gather information.</p>
+<hr />
+<h3 id="dev-secrets-in-plain-sight">Dev Secrets in Plain Sight<a class="headerlink" href="#dev-secrets-in-plain-sight" title="Permanent link">⚓︎</a></h3>
+<p>One of the first places to look during any web application test is for development files that shouldn't be publicly accessible. Thanks to our sitemap reconnaissance, we know exactly where to look: <code>/register/dev/dev_todos?id=[session-id]</code></p>
+<p><img src="/img/objectives/o22/gnome_helper.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Helpful Gnome"></p>
+<div class="admonition quote">
+<p class="admonition-title">Suspiciously Helpful Gnome</p>
+<p>I wonder if that password will work? Can't hurt to try it, right?</p>
+</div>
+<div style="clear: both;"></div>
+
+<p>The developer's to do list is sitting out in the open:</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s3.png" /></p>
+<p>Santa's workshop elves! They left us a Christmas present: valid credentials (<code>teststudent:2025h0L1d4y5</code>), confirmation about some required login header, and a heads up that XSS vulnerabilities are still unpatched. This is information disclosure served on a silver platter!</p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #1</p>
+<p>Information disclosure</p>
+</div>
+<hr />
+<h3 id="the-mysterious-forwarding-ip-requirement">The Mysterious Forwarding IP Requirement<a class="headerlink" href="#the-mysterious-forwarding-ip-requirement" title="Permanent link">⚓︎</a></h3>
+<p>Armed with credentials from the dev notes, we head to the login page at <code>/register/login?id=[session-id]</code> and try logging in with <code>teststudent:2025h0L1d4y5</code>.</p>
+<p>The application responds with an error: <strong>"Invalid Forwarding IP"</strong></p>
+<p>Interesting! The server is checking something about our request's source IP. The dev notes mentioned "Enforce Login Header (which one TBD)" but didn't specify which header or what value it expects.</p>
+<p>We try testing common internal/localhost IP addresses with the <code>X-Forwarded-For</code> header:</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s4.png" /></p>
+<p>Bingo! The application expects <code>X-Forwarded-For: 127.0.0.1</code>, treating requests as if they're coming from <code>localhost</code>. Some developer thought localhost-only authentication was secure enough. Spoiler: it wasn't! Now we just need to set this header for all our browser requests.</p>
+<p>We install the <a href="https://addons.mozilla.org/en-US/firefox/addon/modify-header-value/">Modify Header Value</a> Firefox extension and configure it:</p>
+<ul>
+<li>Header Name: <code>X-Forwarded-For</code></li>
+<li>Header Value: <code>127.0.0.1</code>  </li>
+<li>Domain: <code>flask-schrodingers-scope-firestore.holidayhackchallenge.com</code></li>
+<li>Action: <code>Add</code></li>
+</ul>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s5.png" /></p>
+<p>Now all our browser requests will include the correct header!</p>
+<hr />
+<h3 id="walking-in-with-borrowed-credentials">Walking In with Borrowed Credentials<a class="headerlink" href="#walking-in-with-borrowed-credentials" title="Permanent link">⚓︎</a></h3>
+<p>Armed with credentials from the dev notes and our properly configured header, we head to the login page at <code>/register/login?id=[session-id]</code>.</p>
+<p>We enter:</p>
+<ul>
+<li>Username: <code>teststudent</code></li>
+<li>Password: <code>2025h0L1d4y5</code></li>
+</ul>
+<p>And we're in! The application welcomes us with a green success notification.</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s6.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #2</p>
+<p>Authentication bypass due to weak credential management through publicly accessible development files</p>
+</div>
+<hr />
+<h3 id="unearthing-hidden-course-links">Unearthing Hidden Course Links<a class="headerlink" href="#unearthing-hidden-course-links" title="Permanent link">⚓︎</a></h3>
+<p>After logging in, our gnome friend appears again with another cryptic hint:</p>
+<p><img src="/img/objectives/o22/gnome_helper.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Suspiciously Helpful Gnome"></p>
+<div class="admonition quote">
+<p class="admonition-title">Suspiciously Helpful Gnome</p>
+<p>Guess this site really is still under construction, heh-he! I bet someone has a comment or two about that!</p>
+</div>
+<div style="clear: both;"></div>
+
+<p>Comments? Time to check the HTML source for anything interesting!</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s7.png" /></p>
+<p>Bingo! There's a commented out section in the HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Should provide course listing here eventually instead of the extra step through search flow. --&gt;</span>
+<span class="cm">&lt;!-- &lt;ul id=&quot;courseSearch&quot; class=&quot;courses-list&quot;&gt;</span>
+<span class="cm">    &lt;li&gt;&lt;a href=&quot;/register/courses/search?id=[session-id]&quot;&gt;Course Search&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cm">&lt;/ul&gt; --&gt;</span>
+</code></pre></div>
+<p>The developers left a disabled link to the course search functionality right there in the comments! This is a common web app testing scenario: client side restrictions can often be bypassed by manipulating the DOM. Since the link is already in the HTML (just commented out), we can activate it without ever leaving our browser!</p>
+<p>The browser console lets us inject JavaScript to add elements to the page. We can uncomment this HTML by creating the element and inserting it into the DOM:</p>
+<div class="admonition info">
+<p class="admonition-title">Injecting Commented HTML (browser console)</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;ul id=&quot;courseSearch&quot; class=&quot;courses-list&quot;&gt;&lt;li&gt;&lt;a href=&quot;/register/courses/search?id=[session-id]&quot;&gt;Course Search&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.courses-container&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">div</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s8.png" /></p>
+<p>The page now has the course search link visible! Interestingly, the application's client side JavaScript detects when we uncomment this element and reports another vulnerability. Self-aware applications are the best!</p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #3</p>
+<p>Sensitive data exposure through HTML comments revealing application structure.</p>
+</div>
+<hr />
+<h3 id="teaching-the-database-to-share-gnome-secrets">Teaching the Database to Share Gnome Secrets<a class="headerlink" href="#teaching-the-database-to-share-gnome-secrets" title="Permanent link">⚓︎</a></h3>
+<p>Following our newly injected link leads us to <code>/register/courses/search?id=[session-id]</code>, a simple form asking for a course number. This practically has "test me for SQL injection!" written all over it!</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s9.png" /></p>
+<p>We try the <em>classic</em> SQL injection payload:</p>
+<div class="highlight"><pre><span></span><code><span class="err">&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="mi">1</span><span class="o">=</span><span class="mi">1</span><span class="c1">--</span>
+</code></pre></div>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s10.png" /></p>
+<p>Instead of rejecting our malformed input, the database cheerfully returns all course data, including a mysterious hidden course: <strong>GNOME 827 - Mischief Management</strong>. The database just told us everything it knows without even asking for ID!</p>
+<p><img src="/img/objectives/o22/gnome_helper.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Suspiciously Helpful Gnome"></p>
+<div class="admonition quote">
+<p class="admonition-title">Suspiciously Helpful Gnome</p>
+<p>Well, well, well! Aren't you clever? But...if you want really clever, check those results!</p>
+</div>
+<div style="clear: both;"></div>
+
+<p>Check the results? There's that GNOME 827 course that definitely wasn't supposed to be visible!</p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #4</p>
+<p>SQL injection in the course search functionality</p>
+</div>
+<hr />
+<h3 id="reporting-unauthorized-gnome-courses">Reporting Unauthorized Gnome Courses<a class="headerlink" href="#reporting-unauthorized-gnome-courses" title="Permanent link">⚓︎</a></h3>
+<p>The SQL injection revealed <code>GNOME 827 - Mischief Management</code> at path <code>/register/courses/details/gnome827?id=[session-id]</code>. When we navigate there, the application presents us with a choice: this course clearly wasn't meant to be accessible. Should we report it?</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s11.png" /></p>
+<p>Being responsible pentesters, we click the <strong>"Report"</strong> button. The course gets removed, and we receive confirmation of another vulnerability finding!</p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #5</p>
+<p>Unauthorized access to restricted course content through SQL injection bypass</p>
+</div>
+<hr />
+<h3 id="discovering-the-hidden-wip-course">Discovering the Hidden WIP Course<a class="headerlink" href="#discovering-the-hidden-wip-course" title="Permanent link">⚓︎</a></h3>
+<p>Our gnome friend appears one more time with an intriguing hint:</p>
+<p><img src="/img/objectives/o22/gnome_helper.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Suspiciously Helpful Gnome"></p>
+<div class="admonition quote">
+<p class="admonition-title">Suspiciously Helpful Gnome</p>
+<p>I still think there's a better way to see all the courses. Dev must have a page or at least some <em>notes</em> about one.</p>
+</div>
+<div style="clear: both;"></div>
+
+<p>The gnome provided a direct link to <code>/register/dev/dev_notes</code>!</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s12.png" /></p>
+<p>The notes reveal a work in progress course called <code>holiday_behavior</code>! Based on the application's URL structure, there should be an endpoint at <code>/register/courses/wip/holiday_behavior</code> we can explore.</p>
+<hr />
+<h3 id="the-predictable-cookie-jar">The Predictable Cookie Jar<a class="headerlink" href="#the-predictable-cookie-jar" title="Permanent link">⚓︎</a></h3>
+<p>The trickiest part of this test comes down to cookies. Throughout our exploration, we've been watching the registration cookie values in our browser's storage. They follow a suspiciously predictable pattern: only the last two bytes change!</p>
+<p>Automating some testing to see what values the application assigns:</p>
+<div class="admonition info">
+<p class="admonition-title">Cookie Enumeration Script</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..100<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">      </span><span class="nv">response</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;https://flask-schrodingers-scope-firestore.holidayhackchallenge.com/register/login?id=[session-id]&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;X-Forwarded-For: 127.0.0.1&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;Cookie: registration=[your-registration-cookie]; Schrodinger=[your-schrodinger-cookie]&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-d<span class="w"> </span><span class="s1">&#39;username=test&amp;password=test&amp;id=[session-id]&#39;</span><span class="k">)</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$response</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oP<span class="w"> </span><span class="s1">&#39;registration=\K[^;]+&#39;</span>
+<span class="w">    </span><span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
+</code></pre></div>
+</div>
+<p>The results reveal the cookie values the application assigns across <code>100</code> login attempts (because we should be <em>thorough</em>):</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s18.png" /></p>
+<p>Notice what's missing? The value <code>eb72a05369dcb44c</code> never appears in our enumeration! This is terrible session management. Session tokens should be cryptographically random, not predictable values with a conspicuously missing "special" token in the sequence.</p>
+<p>Testing if we can access restricted content. There's a work in progress course at <code>/register/courses/wip/holiday_behavior?id=[session-id]</code> that we can see in reconnaissance but shouldn't be able to access.</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s13.png" /></p>
+<p>When we try to access it with our current cookie, we get "Invalid session error". But what if the missing <code>4c</code> value is the authorized session?</p>
+<p>We modify our registration cookie to <code>eb72a05369dcb44c</code> in Firefox Storage Inspector and refresh the page:</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s14.png" /></p>
+<p>Success! We're now viewing the holiday behavior course. The page mentions a <em>"Restricted Resources"</em> section that contains classified resources for authorized personnel only. Based on the URL pattern, there should be an endpoint at <code>/register/courses/wip/holiday_behavior/restricted</code>.</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s15.png" /></p>
+<p>However, accessing the <code>holiday_behavior</code> page reset our cookie! We need to set it back to <code>eb72a05369dcb44c</code> before we can access the restricted resources.</p>
+<p>After manually resetting the cookie back to the magic <code>4c</code> value, we access the restricted endpoint:</p>
+<p><code>/register/courses/wip/holiday_behavior/restricted?id=[session-id]</code></p>
+<p>Success! We're in. The application recognizes we've exploited the insecure session management vulnerability, and lets us know that our assessment is complete!</p>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s16.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Vulnerability #6</p>
+<p>Insecure session management with predictable session tokens with only 2-byte variation allowing enumeration and unauthorized access</p>
+</div>
+<hr />
+<h3 id="professional-pentesting-complete">Professional Pentesting Complete!<a class="headerlink" href="#professional-pentesting-complete" title="Permanent link">⚓︎</a></h3>
+<p><img alt="First screenshot" src="../../img/objectives/o22/s17.png" /></p>
+<p>We've completed Kevin's penetration test of the Neighborhood College Course Registration System, identifying all six vulnerabilities within the permitted scope:</p>
+<ol>
+<li><strong>Information Disclosure:</strong> Developer notes exposed credentials</li>
+<li><strong>Authentication Bypass:</strong> Weak credential management</li>
+<li><strong>Sensitive Data Exposure:</strong> Functionality revealed in HTML comments</li>
+<li><strong>SQL Injection:</strong> Course search vulnerable to database injection</li>
+<li><strong>Unauthorized Access:</strong> Restricted content accessible through SQLi</li>
+<li><strong>Insecure Session Management:</strong> Predictable tokens enabling session hijacking</li>
+</ol>
+<p>All findings achieved while respecting scope boundaries. The gnomes tried to sabotage our progress (and lure us out of scope), but professional integrity and Firefox Developer Tools won the day!</p>
+<p>Gloooory! Kevin can confidently demonstrate responsible penetration testing to the Neighborhood College!</p>
+<div class="nav-buttons">
+  <a href="/objectives/o21" class="nav-button nav-left">← Snowcat RCE & Priv Esc</a>
+  <a href="/objectives/o23" class="nav-button nav-right">Next: Find and Shutdown Frosty's Snowglobe Machine →</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/Aeronique" target="_blank" rel="noopener" title="Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Aeronique" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/michelle-duell" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>

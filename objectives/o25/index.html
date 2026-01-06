@@ -1,0 +1,2341 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Michelle "Aeronique" Duell">
+      
+      
+        <link rel="canonical" href="https://hhc2025.aerobytes.io/objectives/o25/">
+      
+      
+        <link rel="prev" href="../o24/">
+      
+      
+        <link rel="next" href="../o26/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/misc/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Free Ski - SANS Holiday Hack Challenge 2025 Write-Up</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-header__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SANS Holiday Hack Challenge 2025 Write-Up
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Free Ski
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SANS Holiday Hack Challenge 2025 Write-Up" class="md-nav__button md-logo" aria-label="SANS Holiday Hack Challenge 2025 Write-Up" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M403 211.7c32.2-24.9 53-63.9 53-107.7 0-75.1-60.9-136-136-136S184 28.9 184 104c0 43.9 20.8 82.9 53 107.7-32.2 16.3-59 41.8-76.8 73.1L112 264.2V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v19.6l-22.5-9.7c-12.2-5.2-26.3.4-31.5 12.6s.4 26.3 12.6 31.5c36.1 15.5 75.9 32.5 119.4 51.2-3.9 14.9-6 30.6-6 46.7 0 70 39.1 130.8 96.6 161.9 7.9 4.3 16.9 6.1 25.9 6.1h123c9 0 18-1.8 25.9-6.1 57.5-31.1 96.6-92 96.6-161.9 0-16.2-2.1-31.8-6-46.7 43.5-18.7 83.4-35.7 119.4-51.2 12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6l-22.5 9.7V224c0-13.3-10.7-24-24-24s-24 10.7-24 24v40.2l-48.2 20.6c-17.9-31.3-44.6-56.8-76.8-73.1M296 416a24 24 0 1 1 48 0 24 24 0 1 1-48 0m24-120a24 24 0 1 1 0 48 24 24 0 1 1 0-48M248 80a24 24 0 1 1 48 0 24 24 0 1 1-48 0m120-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48m-75.8 103.3c-2.7-4.8-4.2-10.2-4.2-15.7 0-17.5 14.2-31.6 31.6-31.6h.8c17.5 0 31.6 14.2 31.6 31.6 0 5.5-1.4 10.9-4.2 15.7L327 195.8c-3.1 5.4-10.8 5.4-13.9 0l-20.9-36.6z"/></svg>
+
+    </a>
+    SANS Holiday Hack Challenge 2025 Write-Up
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objectives
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Objectives
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Holiday Hack Orientation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    It's All About Defang
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neighborhood Watch Bypass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Santa's Gift-Tracking Service Port Mystery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Networking Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Firewall Thinger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to Nmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blob Storage Challenge in the Neighborhood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spare Key
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Open Door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Owner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retro Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mail Detective
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDORable Bistro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosis Network Down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rogue Gnome Identity Provider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantgnome Leap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Going in Reverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Act 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Act 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome Tea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hack-a-Gnome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowcat RCE & Priv Esc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schrödinger's Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find and Shutdown Frosty's Snowglobe Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On the Wire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Ski
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Free Ski
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Final Showdown
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The Final Showdown
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snowblind Ambush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extras
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extras
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gnomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet the Gnomes!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easter_eggs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Easter Egg of DOOM!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Free Ski</h1>
+
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⚓︎</a></h2>
+<p><img alt="First screenshot" src="../../img/objectives/o25/map_o25.png" /></p>
+<p>Go to the <strong>retro store</strong> and help <strong>Goose Olivia</strong> ski down the mountain and collect all five treasure chests to reveal the hidden flag in this classic SkiFree-inspired challenge.</p>
+<p><img src="/img/objectives/o25/hi_olivia.png" style="float: left; margin-right: 20px; margin-bottom: 10px; width: 150px;" alt="Olivia"></p>
+<div class="admonition quote">
+<p class="admonition-title">Olivia</p>
+<p>"HONK! Well hello there! Fancy meeting you here in the Dosis Neighborhood.</p>
+<p>You know, it's the strangest thing... I used to just waddle around the Geese Islands going 'BONK' all day long. Random noises, no thoughts, just vibes. But then something changed, and now here I am—speaking, thinking, wondering how I even got here!</p>
+<p>HONK! You know what happens to geese in a permanent winter? We can't migrate! And trust me, being stuck in one place forever isn't natural—even for someone who just discovered they can think and talk. Frosty needs to chill out... wait, that's exactly the problem!</p>
+</div>
+<div style="clear: both;"></div>
+
+<div class="admonition quote">
+<p class="admonition-title">Olivia</p>
+<p>This game looks simple enough, doesn't it? Almost too simple. But between you and me... it seems nearly impossible to win fair and square.</p>
+<p>My advice? If you ain't cheatin', you ain't tryin'. wink</p>
+<p>Now get out there and show that mountain who's boss!</p>
+</div>
+<h2 id="hints">Hints<a class="headerlink" href="#hints" title="Permanent link">⚓︎</a></h2>
+<details class="example">
+<summary>Extraction</summary>
+<p>Have you ever used <a href="https://github.com/extremecoders-re/pyinstxtractor">PyInstaller Extractor</a>?</p>
+</details>
+<details class="example">
+<summary>Decompilation!</summary>
+<p>Many Python decompilers don't understand Python 3.13, but <a href="https://github.com/zrax/pycdc">Decompyle++</a> does!</p>
+</details>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">⚓︎</a></h2>
+<h3 id="the-challenge-that-giggles-at-your-gaming-skills">The Challenge That Giggles at Your Gaming Skills<a class="headerlink" href="#the-challenge-that-giggles-at-your-gaming-skills" title="Permanent link">⚓︎</a></h3>
+<p>FreeSki is a delightful throwback to the <em>classic</em> SkiFree game from the 90s. You control a tiny skier barreling down an endless snowy mountain, dodging trees and boulders while hunting for 5 treasure chests. Collect all 5 treasures, and the game reveals a hidden flag.</p>
+<p>One look at this game and it's immediately obvious: this was designed by someone who clearly never wants anyone to actually win it legitimately. The treasures spawn in what appears to be random locations across a massive mountain, obstacles pop up faster than a <em>yeti on espresso</em> (that's a scary thought), and the collision detection is unforgiving.</p>
+<p>Olivia wasn't kidding when she said "if you ain't cheatin', you ain't tryin'." Let's crack open the executable and extract that flag without touching the arrow keys even once (well, I mean we will probably have to touch our arrow keys, but that's beside the point...)</p>
+<p>This is reverse engineering after all. Why ski when you can just stay warm and hack?</p>
+<hr />
+<h3 id="unwrapping-the-frozen-package">Unwrapping the Frozen Package<a class="headerlink" href="#unwrapping-the-frozen-package" title="Permanent link">⚓︎</a></h3>
+<p>Python games distributed as standalone <code>.exe</code> files are usually packaged with PyInstaller. Kind of like a gift wrapper that bundles Python code, the Python interpreter, and all dependencies into a single executable. It's convenient for distribution (users don't need Python installed), but it's also completely reversible!</p>
+<p>PyInstaller packages work by:</p>
+<ul>
+<li>Compiling Python source code (<code>.py</code>) into bytecode (<code>.pyc</code>)</li>
+<li>Bundling the bytecode along with a Python interpreter</li>
+<li>Wrapping everything in an executable that unpacks and runs when launched</li>
+</ul>
+<p>We can unwrap that gift and peek inside! Eeee, presents!!</p>
+<p>The first hint pointed us to <a href="https://github.com/extremecoders-re/pyinstxtractor">PyInstaller Extractor</a>, a Python script that reverses the packaging process:</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/master/pyinstxtractor.py
+python3<span class="w"> </span>pyinstxtractor.py<span class="w"> </span>FreeSki.exe
+</code></pre></div>
+<p><img alt="First screenshot" src="../../img/objectives/o25/s1.png" /></p>
+<p>Boom! The extractor dumps everything into a FreeSki.exe_extracted directory. We get:</p>
+<ul>
+<li><strong>FreeSki.pyc:</strong> The main game bytecode (this is our target!)</li>
+<li><strong>PYZ.pyz:</strong> Archive containing Python standard library modules</li>
+<li>Various <code>.dll</code> files: Windows dependencies (SDL2 for graphics, etc.)</li>
+</ul>
+<p>The warning about Python 3.13 is super duper important. PyInstaller Extractor successfully extracts the files but warns us that decompilation might fail because we're running Python 3.12, not 3.13. This matters because Python bytecode format changes between versions, and decompilers can be picky...and this one is <em>really</em> picky.</p>
+<p>Most importantly, we now have FreeSki.pyc, the compiled bytecode containing all the game logic, treasure generation, and flag decoding. This is the treasure map!</p>
+<hr />
+<h3 id="when-decompilers-get-the-sniffles">When Decompilers Get the Sniffles<a class="headerlink" href="#when-decompilers-get-the-sniffles" title="Permanent link">⚓︎</a></h3>
+<p>Here's where things get interesting. We have bytecode (<code>.pyc</code>), but what we really want is readable Python source code. Here's the difference:</p>
+<ul>
+<li><strong>Source code:</strong> Human-readable Python with variable names, comments, clear logic</li>
+<li><strong>Bytecode:</strong> Machine-readable instructions that the Python interpreter executes, looks like gibberish to humans</li>
+</ul>
+<p>A typical reverse engineering workflow would be:</p>
+<ul>
+<li>Extract .pyc bytecode (done!)</li>
+<li>Decompile bytecode back to source code (hoping there's no errors!)</li>
+<li>Read the source code and understand the logic (aka, research!)</li>
+</ul>
+<p>But here's the catch: Python 3.13 is brand spanking new, and most decompilers haven't caught up yet. Running popular decompilers on <code>FreeSki.pyc</code> produces errors faster than a...<em>insert a whimsical pun with a slow animal</em></p>
+<p>Enter <a href="https://github.com/zrax/pycdc">Decompyle++</a> (<code>pycdc</code>), one of the few decompilers that actually understands Python 3.13 bytecode (but output <em>can</em> be fussy!)</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/zrax/pycdc/archive/refs/heads/master.zip<span class="w"> </span>-O<span class="w"> </span>pycdc.zip
+unzip<span class="w"> </span>pycdc.zip
+<span class="nb">cd</span><span class="w"> </span>pycdc-master
+cmake<span class="w"> </span>.
+make
+</code></pre></div>
+<p><img alt="First screenshot" src="../../img/objectives/o25/s2.png" /></p>
+<p>After compilation finishes, we get two super useful tools:</p>
+<ul>
+<li><strong>pycdc:</strong> Attempts to decompile bytecode back to Python source</li>
+<li><strong>pycdas:</strong> Disassembles bytecode into human-readable instruction listing</li>
+</ul>
+<p>Trying to decompile FreeSki.pyc produces... partial results. Some functions decompile cleanly, others hit unsupported opcodes and bail out. This happens when the bytecode contains instructions the decompiler doesn't fully understand yet.</p>
+<p>No problem! When decompilation fails, we can fall back to disassembly.</p>
+<hr />
+<h3 id="reading-the-assembly-language-of-magical-elves">Reading the Assembly Language of Magical Elves<a class="headerlink" href="#reading-the-assembly-language-of-magical-elves" title="Permanent link">⚓︎</a></h3>
+<p>Disassembly is our backup plan, and for reverse engineering, it's often better than decompiled source because you see exactly what the code does without the decompiler making assumptions or educated guesses.</p>
+<p>From the <code>pycdc-master</code> directory:</p>
+<div class="highlight"><pre><span></span><code>./pycdas<span class="w"> </span>../FreeSki.exe_extracted/FreeSki.pyc<span class="w"> </span>&gt;<span class="w"> </span>~/FreeSki_disasm.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+<p>This produces nearly 3000 lines of bytecode disassembly showing every instruction in the game.</p>
+<p><img alt="First screenshot" src="../../img/objectives/o25/s3.png" /></p>
+<p>What we get is nearly 3000 lines of Python bytecode instructions. This isn't quite as cozy to read as source code, but it's infinitely more readable than raw hex bytes! Think of it as reading sheet music instead of listening to the symphony: you can still understand what's happening, you just need to interpret the notation.</p>
+<p>Each instruction in the disassembly shows:</p>
+<ul>
+<li><strong>Line number:</strong> Position in the disassembly (for navigation)</li>
+<li><strong>Instruction name:</strong> What operation to perform (<code>LOAD_FAST</code>, <code>CALL</code>, <code>BINARY_OP</code>, etc.)</li>
+<li><strong>Parameters:</strong> What the instruction operates on (variable names, constants, memory addresses)</li>
+</ul>
+<p>For example, this bytecode:</p>
+<div class="highlight"><pre><span></span><code>16      LOAD_FAST                       2: product
+18      LOAD_CONST                      2: 8
+20      BINARY_OP                       3 (&lt;&lt;)
+</code></pre></div>
+<p>Translates to Python as:
+<div class="highlight"><pre><span></span><code><span class="n">product</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span>
+</code></pre></div></p>
+<p>It's loading the variable product onto the stack, loading the constant <code>8</code>, then performing a binary left shift operation. The result stays on the stack for the next instruction.</p>
+<p>At first bytecode looks intimidating, but after you recognize common patterns (load variable, call function, store result), your brain starts auto-translating (or <em>auto-shutdown</em> in my case a few times). The huge advantage here is that variable names are preserved! No more cryptic <code>var_1</code>, <code>var_2</code> nonsense. We get actual meaningful names like <code>product</code>, <code>treasure_val</code>, and <code>encoded_flag</code>.</p>
+<p>The disassembly gives us a complete blueprint of exactly what the game does, step by step. It's wordy but super thorough. Every single operation is visible, which means we can reconstruct the entire algorithm with perfect accuracy. <em>fingers-crossed</em></p>
+<hr />
+<h3 id="following-the-breadcrumb-trail-through-the-snow">Following the Breadcrumb Trail Through the Snow<a class="headerlink" href="#following-the-breadcrumb-trail-through-the-snow" title="Permanent link">⚓︎</a></h3>
+<p>With 3000 lines of bytecode in front of us, we need to search for keywords related to our goal.</p>
+<p>We're looking for how the game:</p>
+<ul>
+<li>Generates treasure positions</li>
+<li>Detects when we collect a treasure</li>
+<li>Decodes the flag when we get all 5</li>
+</ul>
+<p><code>Grep</code> is our bestie here:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;SetFlag\|GetTreasureLocations\|Mountain&quot;</span><span class="w"> </span>~/FreeSki_disasm.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-30
+</code></pre></div>
+<p>This quickly reveals the most important functions in the disassembly:</p>
+<ul>
+<li><strong>Mountain.GetTreasureLocations:</strong> Generates the 5 treasure positions for a mountain</li>
+<li><strong>SetFlag:</strong> Decodes and displays the flag after collecting all treasures</li>
+<li><strong>Main game loop:</strong> Handles treasure collection during gameplay</li>
+</ul>
+<p>These three pieces form the complete puzzle. Let's start with treasure generation!</p>
+<hr />
+<h3 id="treasure-generation-deterministic-chaos">Treasure Generation: Deterministic Chaos!<a class="headerlink" href="#treasure-generation-deterministic-chaos" title="Permanent link">⚓︎</a></h3>
+<p>First, let's find the treasure generation function in our disassembly:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;GetTreasureLocations&quot;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<p>This shows us where <code>GetTreasureLocations</code> is located. Let's view that function:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;1253,1358p&#39;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<details class="example">
+<summary>GetTreasureLocations Bytecode (click to expand)</summary>
+<div class="highlight"><pre><span></span><code>Object Name: GetTreasureLocations
+                Qualified Name: Mountain.GetTreasureLocations
+                Arg Count: 1
+                Pos Only Arg Count: 0
+                KW Only Arg Count: 0
+                Stack Size: 8
+                Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                [Names]
+                    &#39;random&#39;
+                    &#39;seed&#39;
+                    &#39;binascii&#39;
+                    &#39;crc32&#39;
+                    &#39;name&#39;
+                    &#39;encode&#39;
+                    &#39;height&#39;
+                    &#39;range&#39;
+                    &#39;randint&#39;
+                    &#39;int&#39;
+                [Locals+Names]
+                    &#39;self&#39;
+                    &#39;locations&#39;
+                    &#39;prev_height&#39;
+                    &#39;prev_horiz&#39;
+                    &#39;i&#39;
+                    &#39;e_delta&#39;
+                    &#39;h_delta&#39;
+                [Constants]
+                    None
+                    &#39;utf-8&#39;
+                    0
+                    5
+                    200
+                    800
+                    4
+                [Disassembly]
+                    0       RESUME                          0
+                    2       BUILD_MAP                       0
+                    4       STORE_FAST                      1: locations
+                    6       LOAD_GLOBAL                     0: random
+                    16      LOAD_ATTR                       2: seed
+                    36      PUSH_NULL
+                    38      LOAD_GLOBAL                     4: binascii
+                    48      LOAD_ATTR                       6: crc32
+                    68      PUSH_NULL
+                    70      LOAD_FAST                       0: self
+                    72      LOAD_ATTR                       8: name
+                    92      LOAD_ATTR                       11: encode
+                    112     LOAD_CONST                      1: &#39;utf-8&#39;
+                    114     CALL                            1
+                    122     CALL                            1
+                    130     CALL                            1
+                    138     POP_TOP
+                    140     LOAD_FAST                       0: self
+                    142     LOAD_ATTR                       12: height
+                    162     STORE_FAST                      2: prev_height
+                    164     LOAD_CONST                      2: 0
+                    166     STORE_FAST                      3: prev_horiz
+                    168     LOAD_GLOBAL                     15: NULL + range
+                    178     LOAD_CONST                      2: 0
+                    180     LOAD_CONST                      3: 5
+                    182     CALL                            2
+                    190     GET_ITER
+                    192     FOR_ITER                        93 (to 380)
+                    196     STORE_FAST                      4: i
+                    198     LOAD_GLOBAL                     0: random
+                    208     LOAD_ATTR                       16: randint
+                    228     PUSH_NULL
+                    230     LOAD_CONST                      4: 200
+                    232     LOAD_CONST                      5: 800
+                    234     CALL                            2
+                    242     STORE_FAST                      5: e_delta
+                    244     LOAD_GLOBAL                     0: random
+                    254     LOAD_ATTR                       16: randint
+                    274     PUSH_NULL
+                    276     LOAD_GLOBAL                     19: NULL + int
+                    286     LOAD_CONST                      2: 0
+                    288     LOAD_FAST                       5: e_delta
+                    290     LOAD_CONST                      6: 4
+                    292     BINARY_OP                       11 (/)
+                    296     BINARY_OP                       10 (-)
+                    300     CALL                            1
+                    308     LOAD_GLOBAL                     19: NULL + int
+                    318     LOAD_FAST                       5: e_delta
+                    320     LOAD_CONST                      6: 4
+                    322     BINARY_OP                       11 (/)
+                    326     CALL                            1
+                    334     CALL                            2
+                    342     STORE_FAST                      6: h_delta
+                    344     LOAD_FAST_LOAD_FAST             54: prev_horiz, h_delta
+                    346     BINARY_OP                       0 (+)
+                    350     LOAD_FAST_LOAD_FAST             18: locations, prev_height
+                    352     LOAD_FAST                       5: e_delta
+                    354     BINARY_OP                       10 (-)
+                    358     STORE_SUBSCR
+                    362     LOAD_FAST_LOAD_FAST             37: prev_height, e_delta
+                    364     BINARY_OP                       10 (-)
+                    368     STORE_FAST                      2: prev_height
+                    370     LOAD_FAST_LOAD_FAST             54: prev_horiz, h_delta
+                    372     BINARY_OP                       0 (+)
+                    376     STORE_FAST                      3: prev_horiz
+                    378     JUMP_BACKWARD                   95 (to 190)
+                    382     END_FOR
+                    384     POP_TOP
+                    386     LOAD_FAST                       1: locations
+                    388     RETURN_VALUE
+                [Exception Table]
+</code></pre></div>
+</details>
+<p>At first glance, this looks complicated, but let's walk through it step by step by looking at the bytecode instructions:</p>
+<p><strong>Instructions 6-138: Seed the random number generator</strong></p>
+<p>The code loads <code>binascii.crc32()</code>, passes in the mountain's name (encoded as <code>UTF-8</code>), and uses the result to seed Python's random module. <code>CRC32</code> is a checksum algorithm that always produces the same output for the same input. So "<code>Mount Snow</code>" always generates the same seed value.</p>
+<p><strong>Instructions 140-166: Initialize starting position</strong></p>
+<p>Sets <code>prev_height</code> to the mountain's starting height and <code>prev_horiz</code> to <code>0</code> (starting in the middle).</p>
+<p><strong>Instructions 168-378: Generate 5 treasures in a loop</strong></p>
+<p>For each treasure:</p>
+<ul>
+<li>Generate random <code>e_delta</code> (elevation drop: 200-800 units)</li>
+<li>Generate random <code>h_delta</code> (horizontal shift: -e_delta/4 to +e_delta/4)</li>
+<li>Calculate new position and add it to the treasures</li>
+</ul>
+<p>Here's the magical part: because the RNG is seeded with <code>CRC32</code> of the mountain name, these "random" values aren't very random at all! Every time you run the game on "<code>Mount Snow</code>", the treasures appear in exactly the same positions. The game feels random when you play it, but it's completely deterministic.</p>
+<p>Translating this bytecode to Python:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_treasure_locations</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+    <span class="n">prev_height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="n">prev_horiz</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="n">e_delta</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+        <span class="n">h_delta</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">e_delta</span> <span class="o">/</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e_delta</span> <span class="o">/</span> <span class="mi">4</span><span class="p">))</span>
+
+        <span class="n">horiz</span> <span class="o">=</span> <span class="n">prev_horiz</span> <span class="o">+</span> <span class="n">h_delta</span>
+        <span class="n">vertical</span> <span class="o">=</span> <span class="n">prev_height</span> <span class="o">-</span> <span class="n">e_delta</span>
+
+        <span class="n">prev_height</span> <span class="o">-=</span> <span class="n">e_delta</span>
+        <span class="n">prev_horiz</span> <span class="o">+=</span> <span class="n">h_delta</span>
+</code></pre></div>
+<p>This is super <em>AWESOME</em> design! The treasures appear randomly scattered across the mountain, but they're actually in fixed positions determined entirely by the mountain's name. It means speedrunners can memorize routes (like <em>Super Mario World</em>), but it also means we can reproduce the positions programmatically!</p>
+<hr />
+<h3 id="the-missing-piece-from-coordinates-to-values">The Missing Piece: From Coordinates to Values<a class="headerlink" href="#the-missing-piece-from-coordinates-to-values" title="Permanent link">⚓︎</a></h3>
+<p>Knowing where the treasures spawn is only half the puzzle. We also need to know what values get passed to the <code>SetFlag</code> function when you collect them.</p>
+<p>This requires digging into the main game loop to find where treasure collection is handled. Let's search for it:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;treasures_collected&quot;</span><span class="w"> </span>~/FreeSki_disasm.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+</code></pre></div>
+<p>This shows several references to treasures_collected. Let's view the relevant bytecode section where treasures are appended to the collection:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;2269,2310p&#39;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<details class="example">
+<summary>Treasure Collection Bytecode (click to expand)</summary>
+<div class="highlight"><pre><span></span><code>            1830    STORE_FAST_STORE_FAST           205: collided_object, collided_row
+            1832    STORE_FAST                      14: collided_row_offset
+            1834    LOAD_FAST                       12: collided_object
+            1836    LOAD_GLOBAL                     96: Obstacles
+            1846    LOAD_ATTR                       98: TREASURE
+            1866    COMPARE_OP                      88 (==)
+            1870    POP_JUMP_IF_FALSE               68 (to 2008)
+            1874    LOAD_CONST                      0: None
+            1876    LOAD_FAST                       13: collided_row
+            1878    LOAD_CONST                      7: 1
+            1880    BINARY_SUBSCR
+            1884    LOAD_FAST                       14: collided_row_offset
+            1886    STORE_SUBSCR
+            1890    LOAD_FAST_CHECK                 4: treasures_collected
+            1892    LOAD_ATTR                       101: append
+            1912    LOAD_FAST                       13: collided_row
+            1914    LOAD_CONST                      8: 0
+            1916    BINARY_SUBSCR
+            1920    LOAD_GLOBAL                     102: mountain_width
+            1930    BINARY_OP                       5 (*)
+            1934    LOAD_FAST                       14: collided_row_offset
+            1936    BINARY_OP                       0 (+)
+            1940    CALL                            1
+            1948    POP_TOP
+            1950    LOAD_GLOBAL                     105: NULL + len
+            1960    LOAD_FAST                       4: treasures_collected
+            1962    CALL                            1
+            1970    LOAD_CONST                      9: 5
+            1972    COMPARE_OP                      88 (==)
+            1976    POP_JUMP_IF_FALSE               14 (to 2006)
+            1980    LOAD_GLOBAL                     107: NULL + SetFlag
+            1990    LOAD_FAST_CHECK                 6: mnt
+            1992    LOAD_FAST                       4: treasures_collected
+            1994    CALL                            2
+            2002    POP_TOP
+            2004    LOAD_CONST                      2: True
+            2006    STORE_FAST                      0: victory_mode
+            2008    JUMP_FORWARD                    16 (to 2042)
+            2010    LOAD_FAST                       5: skier
+            2012    LOAD_ATTR                       109: Crash
+            2032    CALL                            0
+            2040    POP_TOP
+</code></pre></div>
+</details>
+<p>The bytecode is dense (like a good eggnog) here, but we can break it down. Looking at the disassembly output, we see:</p>
+<ul>
+<li><strong>Collision detection:</strong> Compares <code>collided_object</code> to <code>Obstacles.TREASURE</code> enum value to check if we hit a treasure.</li>
+<li><strong>Position extraction:</strong> Grabs <code>collided_row[0]</code> (vertical position) and <code>collided_row_offset</code> (horizontal offset) from the collision data.</li>
+</ul>
+<p><strong>The important part:</strong> The bytecode loads <code>collided_row[0]</code>, multiplies it by <code>mountain_width</code>, then adds <code>collided_row_offset</code>. This translates to:</p>
+<div class="highlight"><pre><span></span><code><span class="n">treasure_value</span> <span class="o">=</span> <span class="n">collided_row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mountain_width</span> <span class="o">+</span> <span class="n">collided_row_offset</span>
+<span class="n">treasures_collected</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">treasure_value</span><span class="p">)</span>
+</code></pre></div>
+<p>The game converts 2D coordinates (horizontal, vertical) into a single integer by treating the mountain as a 1000-unit-wide grid. It's a flattened 2D array index, the same technique used in computer graphics to convert (x, y) screen positions into linear memory addresses.</p>
+<p>Why 1000? Looking back at the global constants near the top of the disassembly (line 22):</p>
+<p><code>mountain_width = 1000</code></p>
+<p>The game uses a fixed 1000-unit width for all mountains, no matter their height. This makes the math simple and consistent across all levels.</p>
+<p>So if a treasure is at horizontal position 113 and vertical position 2966:</p>
+<p><code>treasure_value = 2966 * 1000 + 113 = 2966113</code></p>
+<p>The treasure value essentially encodes both coordinates into a single number. You can reverse the calculation to get the original coordinates:</p>
+<div class="highlight"><pre><span></span><code><span class="n">horizontal</span> <span class="o">=</span> <span class="n">treasure_value</span> <span class="o">%</span> <span class="mi">1000</span>
+<span class="n">vertical</span> <span class="o">=</span> <span class="n">treasure_value</span> <span class="o">//</span> <span class="mi">1000</span>
+</code></pre></div>
+<p>Pretty cool! One number stores both pieces of position data.</p>
+<p>This was the missing link! Early attempts tried summing coordinates, XORing them, or concatenating them as strings. None of that worked because the actual formula is this specific flattened coordinate calculation.</p>
+<p>Once you collect all 5 treasures, the <code>treasures_collected</code> list contains 5 integers, each representing a treasure's position on the mountain grid. These values then get fed into <code>SetFlag</code> to unlock the flag.</p>
+<hr />
+<h3 id="the-flag-decoder-xor-magic-with-a-twist">The Flag Decoder: XOR Magic With a Twist<a class="headerlink" href="#the-flag-decoder-xor-magic-with-a-twist" title="Permanent link">⚓︎</a></h3>
+<p>Now for the main act! Let's find the <code>SetFlag</code> function:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Object Name: SetFlag&quot;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<p>This shows us where <code>SetFlag</code> is located. Let's view the complete function:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;1776,1896p&#39;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<details class="example">
+<summary>SetFlag Bytecode (click to expand)</summary>
+<div class="highlight"><pre><span></span><code>        Object Name: SetFlag
+        Qualified Name: SetFlag
+        Arg Count: 2
+        Pos Only Arg Count: 0
+        KW Only Arg Count: 0
+        Stack Size: 7
+        Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+        [Names]
+            &#39;random&#39;
+            &#39;seed&#39;
+            &#39;range&#39;
+            &#39;len&#39;
+            &#39;encoded_flag&#39;
+            &#39;randint&#39;
+            &#39;append&#39;
+            &#39;chr&#39;
+            &#39;join&#39;
+            &#39;print&#39;
+            &#39;flagfont&#39;
+            &#39;render&#39;
+            &#39;pygame&#39;
+            &#39;Color&#39;
+            &#39;flag_text_surface&#39;
+        [Locals+Names]
+            &#39;mountain&#39;
+            &#39;treasure_list&#39;
+            &#39;product&#39;
+            &#39;treasure_val&#39;
+            &#39;decoded&#39;
+            &#39;i&#39;
+            &#39;r&#39;
+            &#39;flag_text&#39;
+        [Constants]
+            None
+            0
+            8
+            255
+            &#39;Flag: %s&#39;
+            &#39;&#39;
+            False
+            &#39;saddle brown&#39;
+        [Disassembly]
+            0       RESUME                          0
+            2       LOAD_CONST                      1: 0
+            4       STORE_FAST                      2: product
+            6       LOAD_FAST                       1: treasure_list
+            8       GET_ITER
+            10      FOR_ITER                        11 (to 34)
+            14      STORE_FAST                      3: treasure_val
+            16      LOAD_FAST                       2: product
+            18      LOAD_CONST                      2: 8
+            20      BINARY_OP                       3 (&lt;&lt;)
+            24      LOAD_FAST                       3: treasure_val
+            26      BINARY_OP                       12 (^)
+            30      STORE_FAST                      2: product
+            32      JUMP_BACKWARD                   13 (to 8)
+            36      END_FOR
+            38      POP_TOP
+            40      LOAD_GLOBAL                     0: random
+            50      LOAD_ATTR                       2: seed
+            70      PUSH_NULL
+            72      LOAD_FAST                       2: product
+            74      CALL                            1
+            82      POP_TOP
+            84      BUILD_LIST                      0
+            86      STORE_FAST                      4: decoded
+            88      LOAD_GLOBAL                     5: NULL + range
+            98      LOAD_CONST                      1: 0
+            100     LOAD_GLOBAL                     7: NULL + len
+            110     LOAD_FAST                       0: mountain
+            112     LOAD_ATTR                       8: encoded_flag
+            132     CALL                            1
+            140     CALL                            2
+            148     GET_ITER
+            150     FOR_ITER                        68 (to 288)
+            154     STORE_FAST                      5: i
+            156     LOAD_GLOBAL                     0: random
+            166     LOAD_ATTR                       10: randint
+            186     PUSH_NULL
+            188     LOAD_CONST                      1: 0
+            190     LOAD_CONST                      3: 255
+            192     CALL                            2
+            200     STORE_FAST                      6: r
+            202     LOAD_FAST                       4: decoded
+            204     LOAD_ATTR                       13: append
+            224     LOAD_GLOBAL                     15: NULL + chr
+            234     LOAD_FAST                       0: mountain
+            236     LOAD_ATTR                       8: encoded_flag
+            256     LOAD_FAST                       5: i
+            258     BINARY_SUBSCR
+            262     LOAD_FAST                       6: r
+            264     BINARY_OP                       12 (^)
+            268     CALL                            1
+            276     CALL                            1
+            284     POP_TOP
+            286     JUMP_BACKWARD                   70 (to 148)
+            290     END_FOR
+            292     POP_TOP
+            294     LOAD_CONST                      4: &#39;Flag: %s&#39;
+            296     LOAD_CONST                      5: &#39;&#39;
+            298     LOAD_ATTR                       17: join
+            318     LOAD_FAST                       4: decoded
+            320     CALL                            1
+            328     BINARY_OP                       6 (%)
+            332     STORE_FAST                      7: flag_text
+            334     LOAD_GLOBAL                     19: NULL + print
+            344     LOAD_FAST                       7: flag_text
+            346     CALL                            1
+            354     POP_TOP
+            356     LOAD_GLOBAL                     20: flagfont
+            366     LOAD_ATTR                       23: render
+            386     LOAD_FAST                       7: flag_text
+            388     LOAD_CONST                      6: False
+            390     LOAD_GLOBAL                     24: pygame
+            400     LOAD_ATTR                       26: Color
+            420     PUSH_NULL
+            422     LOAD_CONST                      7: &#39;saddle brown&#39;
+            424     CALL                            1
+            432     CALL                            3
+            440     STORE_GLOBAL                    14: flag_text_surface
+            442     RETURN_CONST                    0: None
+</code></pre></div>
+</details>
+<p>Let's walk through this bytecode carefully, because it's doing something neat:</p>
+<p><strong>Step 1: Combine treasure values into a "product"</strong></p>
+<p>The bytecode starts by initializing <code>product = 0</code>, then loops through all 5 treasure values. For each value, it left shifts the product by 8 bits (<code>product &lt;&lt; 8</code>) and XORs it with the current treasure value. This packs the treasure values together byte by byte. In Python:</p>
+<div class="highlight"><pre><span></span><code><span class="n">product</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">treasure_val</span> <span class="ow">in</span> <span class="n">treasure_list</span><span class="p">:</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="p">(</span><span class="n">product</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">^</span> <span class="n">treasure_val</span>
+</code></pre></div>
+<p>Why left shift by 8? It's packing the treasure values together byte by byte! Each <code>&lt;&lt; 8</code> shift multiplies the current product by 256 (2^8), making room for the next value. Then XOR mixes in the new treasure value.</p>
+<p>After processing all 5 treasures, product is a unique integer that represents this specific combination of treasure positions. Different treasure sequences produce different products, which is exactly what we want for a key derivation function.</p>
+<p><strong>Step 2: Reseed the RNG</strong></p>
+<p>The bytecode calls <code>random.seed(product)</code> using the combined product value. The same treasure sequence always produces the same seed, which means the same "random" bytes will be generated for decryption.</p>
+<p><strong>Step 3: XOR decode the flag</strong></p>
+<p>The bytecode creates an empty list <code>decoded = []</code>, then loops through each byte of the encoded flag. For each byte:</p>
+<ul>
+<li>Generate a random byte (0-255)</li>
+<li>XOR it with the corresponding encoded flag byte</li>
+<li>Convert result to a character</li>
+</ul>
+<p>The complete Python translation:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_flag</span><span class="p">(</span><span class="n">encoded_flag</span><span class="p">,</span> <span class="n">treasure_list</span><span class="p">):</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">treasure_val</span> <span class="ow">in</span> <span class="n">treasure_list</span><span class="p">:</span>
+        <span class="n">product</span> <span class="o">=</span> <span class="p">(</span><span class="n">product</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">^</span> <span class="n">treasure_val</span>
+
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+
+    <span class="n">decoded</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">encoded_flag</span><span class="p">)):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">decoded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">encoded_flag</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^</span> <span class="n">r</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
+</code></pre></div>
+This is <em>elegant</em> cryptography! The flag is encrypted with XOR using a deterministic random stream. The stream is seeded by the treasure positions, which means:</p>
+<ul>
+<li>Only the correct treasure sequence decodes the flag properly</li>
+<li>Any other sequence produces garbage (since it generates different random bytes)</li>
+<li>The decryption is completely deterministic and reproducible</li>
+</ul>
+<p>You can't shortcut it, you can't guess it, you need the exact treasure positions to unlock the correct flag.</p>
+<h3 id="seven-mountains-seven-mysteries">Seven Mountains, Seven Mysteries<a class="headerlink" href="#seven-mountains-seven-mysteries" title="Permanent link">⚓︎</a></h3>
+<p>Let's find where the mountains are defined in the disassembly:</p>
+<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Mount Snow\|Aspen\|Whistler&quot;</span><span class="w"> </span>~/FreeSki_disasm.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div>
+<p>Searching for mountain names reveals where the definitions are located. Let's view that section:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;2865,2930p&#39;</span><span class="w"> </span>~/FreeSki_disasm.txt
+</code></pre></div>
+<details class="example">
+<summary>Mountain Definitions Bytecode (click to expand)</summary>
+<div class="highlight"><pre><span></span><code>    2452    LOAD_BUILD_CLASS
+    2454    PUSH_NULL
+    2456    LOAD_CONST                      51: &lt;CODE&gt; Mountain
+    2458    MAKE_FUNCTION
+    2460    LOAD_CONST                      52: &#39;Mountain&#39;
+    2462    CALL                            2
+    2470    STORE_NAME                      75: Mountain
+    2472    LOAD_NAME                       75: Mountain
+    2474    PUSH_NULL
+    2476    LOAD_CONST                      53: &#39;Mount Snow&#39;
+    2478    LOAD_CONST                      54: 3586
+    2480    LOAD_CONST                      55: 3400
+    2482    LOAD_CONST                      56: 2400
+    2484    LOAD_CONST                      57: b&#39;\x90\x00\x1d\xbc\x17b\xed6S&quot;\xb0&lt;Y\xd6\xce\x169\xae\xe9|\xe2Gs\xb7\xfdy\xcf5\x98&#39;
+    2486    CALL                            5
+    2494    LOAD_NAME                       75: Mountain
+    2496    PUSH_NULL
+    2498    LOAD_CONST                      58: &#39;Aspen&#39;
+    2500    LOAD_CONST                      59: 11211
+    2502    LOAD_CONST                      60: 11000
+    2504    LOAD_CONST                      61: 10000
+    2506    LOAD_CONST                      62: b&#39;U\xd7%x\xbfvj!\xfe\x9d\xb9\xc2\xd1k\x02y\x17\x9dK\x98\xf1\x92\x0f!\xf1\\\xa0\x1b\x0f&#39;
+    2508    CALL                            5
+    2516    LOAD_NAME                       75: Mountain
+    2518    PUSH_NULL
+    2520    LOAD_CONST                      63: &#39;Whistler&#39;
+    2522    LOAD_CONST                      64: 7156
+    2524    LOAD_CONST                      65: 6000
+    2526    LOAD_CONST                      66: 6500
+    2528    LOAD_CONST                      67: b&#39;\x1cN\x13\x1a\x97\xd4\xb2!\xf9\xf6\xd4#\xee\xebh\xecs.\x08M!hr9?\xde\x0c\x86\x02&#39;
+    2530    CALL                            5
+    2538    LOAD_NAME                       75: Mountain
+    2540    PUSH_NULL
+    2542    LOAD_CONST                      68: &#39;Mount Baker&#39;
+    2544    LOAD_CONST                      69: 10781
+    2546    LOAD_CONST                      70: 9000
+    2548    LOAD_CONST                      65: 6000
+    2550    LOAD_CONST                      71: b&#39;\xac\xf9#\xf4T\xf1%h\xbe3FI+h\r\x01V\xee\xc2C\x13\xf3\x97ef\xac\xe3z\x96&#39;
+    2552    CALL                            5
+    2560    LOAD_NAME                       75: Mountain
+    2562    PUSH_NULL
+    2564    LOAD_CONST                      72: &#39;Mount Norquay&#39;
+    2566    LOAD_CONST                      73: 6998
+    2568    LOAD_CONST                      74: 6300
+    2570    LOAD_CONST                      75: 3000
+    2572    LOAD_CONST                      76: b&#39;\x0c\x1c\xad!\xc6,\xec0\x0b+&quot;\x9f@.\xc8\x13\xadb\x86\xea{\xfeS\xe0S\x85\x90\x03q&#39;
+    2574    CALL                            5
+    2582    LOAD_NAME                       75: Mountain
+    2584    PUSH_NULL
+    2586    LOAD_CONST                      77: &#39;Mount Erciyes&#39;
+    2588    LOAD_CONST                      78: 12848
+    2590    LOAD_CONST                      61: 10000
+    2592    LOAD_CONST                      79: 12000
+    2594    LOAD_CONST                      80: b&#39;n\xad\xb4l^I\xdb\xe1\xd0\x7f\x92\x92\x96\x1bq\xca`PvWg\x85\xb21^\x93F\x1a\xee&#39;
+    2596    CALL                            5
+    2604    LOAD_NAME                       75: Mountain
+    2606    PUSH_NULL
+    2608    LOAD_CONST                      81: &#39;Dragonmount&#39;
+    2610    LOAD_CONST                      82: 16282
+    2612    LOAD_CONST                      83: 15500
+    2614    LOAD_CONST                      84: 16000
+    2616    LOAD_CONST                      85: b&#39;Z\xf9\xdf\x7f_\x02\xd8\x89\x12\xd2\x11p\xb6\x96\x19\x05x))v\xc3\xecv\xf4\xe2\\\x9a\xbe\xb5&#39;
+    2618    CALL                            5
+    2626    BUILD_LIST                      7
+    2628    STORE_GLOBAL                    76: Mountains
+    2630    LOAD_BUILD_CLASS
+</code></pre></div>
+</details>
+<p>The game includes 7 different mountains, each with:</p>
+<ul>
+<li><strong>Name:</strong> The mountain's identifier (used for <code>CRC32</code> seeding)</li>
+<li><strong>Height:</strong> Starting elevation in game units</li>
+<li><strong>Encoded flag:</strong> A byte string containing the encrypted flag</li>
+</ul>
+<p>The mountains range from the modest <code>Mount Snow</code> (3586 units tall) to the towering <code>Dragonmount</code> (16282 units). Each mountain gets its own unique encoded flag, though as we'll discover, only one contains the real CTF flag.</p>
+<p>Here's Mount Snow's complete data structure from the bytecode:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Mountain</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Mount Snow&quot;</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">3586</span><span class="p">,</span>
+    <span class="n">treeline</span><span class="o">=</span><span class="mi">3400</span><span class="p">,</span>
+    <span class="n">yetiline</span><span class="o">=</span><span class="mi">2400</span><span class="p">,</span>
+    <span class="n">encoded_flag</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x90\x00\x1d\xbc\x17</span><span class="s1">b</span><span class="se">\xed</span><span class="s1">6S&quot;</span><span class="se">\xb0</span><span class="s1">&lt;Y</span><span class="se">\xd6\xce\x16</span><span class="s1">9</span><span class="se">\xae\xe9</span><span class="s1">|</span><span class="se">\xe2</span><span class="s1">Gs</span><span class="se">\xb7\xfd</span><span class="s1">y</span><span class="se">\xcf</span><span class="s1">5</span><span class="se">\x98</span><span class="s1">&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Those random-looking bytes? That's our encrypted flag, just waiting to be XOR'd back to readable text with the right treasure positions!</p>
+<p>The game loads all 7 mountains into a list, letting players choose which slope to conquer. For this challenge, we only care about finding which mountain contains the actual flag, but the multi-mountain design adds replay value for anyone actually playing the game legitimately (assuming they have the patience of a <em>glacier</em>... and one not under the effects of global warming).</p>
+<hr />
+<h3 id="assembling-our-automatic-ski-lift">Assembling Our Automatic Ski Lift<a class="headerlink" href="#assembling-our-automatic-ski-lift" title="Permanent link">⚓︎</a></h3>
+<p>Now comes the satisfying part, where all those hours of bytecode archaeology pay off! We've reverse engineered the entire treasure and flag system. Time to put all the pieces together into a working decoder.</p>
+<p>We understand:</p>
+<ul>
+<li>How treasure positions are generated (CRC32 seeding)</li>
+<li>How positions convert to values (vertical * 1000 + horizontal)</li>
+<li>How values unlock the flag (XOR decryption with combined product seed)</li>
+</ul>
+<p>Building the decoder is straightforward since we've already translated all the bytecode to Python. The tricky part was getting the order of the treasures correct!</p>
+<p>When the game generates treasures in <code>GetTreasureLocations</code>, it creates them in a specific order based on the RNG sequence. Initially, I tried storing them in a Python dictionary (which seemed logical for coordinates), but dictionaries don't preserve order in the same way... and more importantly, if two treasures have the same horizontal coordinate, the dictionary overwrites one! That was a fun realization after struggling for a <em>LONG</em> time!</p>
+<p>Mount Snow has exactly this issue: treasures #2 and #5 both spawn at horizontal position 85. Using a dictionary meant we only got 4 treasures, not 5. We can fix this by using a list to preserve all treasures in generation order.</p>
+<p>Here's the complete decoder that ties everything together:</p>
+<div class="admonition info">
+<p class="admonition-title">FreeSki Flag Decoder</p>
+</div>
+<div class="highlight"><pre><span></span><code>    <span class="c1">#!/usr/bin/env python3</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>
+
+    <span class="n">mountains</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;Mount Snow&quot;</span><span class="p">,</span> <span class="mi">3586</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x90\x00\x1d\xbc\x17</span><span class="s1">b</span><span class="se">\xed</span><span class="s1">6S&quot;</span><span class="se">\xb0</span><span class="s1">&lt;Y</span><span class="se">\xd6\xce\x16</span><span class="s1">9</span><span class="se">\xae\xe9</span><span class="s1">|</span><span class="se">\xe2</span><span class="s1">Gs</span><span class="se">\xb7\xfd</span><span class="s1">y</span><span class="se">\xcf</span><span class="s1">5</span><span class="se">\x98</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Aspen&quot;</span><span class="p">,</span> <span class="mi">11211</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;U</span><span class="se">\xd7</span><span class="si">%x</span><span class="se">\xbf</span><span class="s1">vj!</span><span class="se">\xfe\x9d\xb9\xc2\xd1</span><span class="s1">k</span><span class="se">\x02</span><span class="s1">y</span><span class="se">\x17\x9d</span><span class="s1">K</span><span class="se">\x98\xf1\x92\x0f</span><span class="s1">!</span><span class="se">\xf1\\\xa0\x1b\x0f</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Whistler&quot;</span><span class="p">,</span> <span class="mi">7156</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x1c</span><span class="s1">N</span><span class="se">\x13\x1a\x97\xd4\xb2</span><span class="s1">!</span><span class="se">\xf9\xf6\xd4</span><span class="s1">#</span><span class="se">\xee\xeb</span><span class="s1">h</span><span class="se">\xec</span><span class="s1">s.</span><span class="se">\x08</span><span class="s1">M!hr9?</span><span class="se">\xde\x0c\x86\x02</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Mount Baker&quot;</span><span class="p">,</span> <span class="mi">10781</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xac\xf9</span><span class="s1">#</span><span class="se">\xf4</span><span class="s1">T</span><span class="se">\xf1</span><span class="s1">%h</span><span class="se">\xbe</span><span class="s1">3FI+h</span><span class="se">\r\x01</span><span class="s1">V</span><span class="se">\xee\xc2</span><span class="s1">C</span><span class="se">\x13\xf3\x97</span><span class="s1">ef</span><span class="se">\xac\xe3</span><span class="s1">z</span><span class="se">\x96</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Mount Norquay&quot;</span><span class="p">,</span> <span class="mi">6998</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x0c\x1c\xad</span><span class="s1">!</span><span class="se">\xc6</span><span class="s1">,</span><span class="se">\xec</span><span class="s1">0</span><span class="se">\x0b</span><span class="s1">+&quot;</span><span class="se">\x9f</span><span class="s1">@.</span><span class="se">\xc8\x13\xad</span><span class="s1">b</span><span class="se">\x86\xea</span><span class="s1">{</span><span class="se">\xfe</span><span class="s1">S</span><span class="se">\xe0</span><span class="s1">S</span><span class="se">\x85\x90\x03</span><span class="s1">q&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Mount Erciyes&quot;</span><span class="p">,</span> <span class="mi">12848</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;n</span><span class="se">\xad\xb4</span><span class="s1">l^I</span><span class="se">\xdb\xe1\xd0\x7f\x92\x92\x96\x1b</span><span class="s1">q</span><span class="se">\xca</span><span class="s1">`PvWg</span><span class="se">\x85\xb2</span><span class="s1">1^</span><span class="se">\x93</span><span class="s1">F</span><span class="se">\x1a\xee</span><span class="s1">&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Dragonmount&quot;</span><span class="p">,</span> <span class="mi">16282</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;Z</span><span class="se">\xf9\xdf\x7f</span><span class="s1">_</span><span class="se">\x02\xd8\x89\x12\xd2\x11</span><span class="s1">p</span><span class="se">\xb6\x96\x19\x05</span><span class="s1">x))v</span><span class="se">\xc3\xec</span><span class="s1">v</span><span class="se">\xf4\xe2\\\x9a\xbe\xb5</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_treasure_values</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">crc32</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+        <span class="n">prev_height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="n">prev_horiz</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+            <span class="n">e_delta</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+            <span class="n">h_delta</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">e_delta</span> <span class="o">/</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">e_delta</span> <span class="o">/</span> <span class="mi">4</span><span class="p">))</span>
+
+            <span class="n">horiz</span> <span class="o">=</span> <span class="n">prev_horiz</span> <span class="o">+</span> <span class="n">h_delta</span>
+            <span class="n">vertical</span> <span class="o">=</span> <span class="n">prev_height</span> <span class="o">-</span> <span class="n">e_delta</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vertical</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">+</span> <span class="n">horiz</span><span class="p">)</span>
+
+            <span class="n">prev_height</span> <span class="o">-=</span> <span class="n">e_delta</span>
+            <span class="n">prev_horiz</span> <span class="o">+=</span> <span class="n">h_delta</span>
+
+        <span class="k">return</span> <span class="n">values</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">decode_flag</span><span class="p">(</span><span class="n">encoded_flag</span><span class="p">,</span> <span class="n">treasure_values</span><span class="p">):</span>
+        <span class="n">product</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">treasure_values</span><span class="p">:</span>
+            <span class="n">product</span> <span class="o">=</span> <span class="p">(</span><span class="n">product</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">^</span> <span class="n">val</span>
+
+        <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+
+        <span class="n">decoded</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">encoded_flag</span><span class="p">:</span>
+            <span class="n">decoded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">byte</span> <span class="o">^</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">encoded_flag</span> <span class="ow">in</span> <span class="n">mountains</span><span class="p">:</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">get_treasure_values</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="n">flag</span> <span class="o">=</span> <span class="n">decode_flag</span><span class="p">(</span><span class="n">encoded_flag</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">flag</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The decoder:</p>
+<ul>
+<li>Extracts all 7 mountain definitions from the disassembly</li>
+<li>For each mountain, generates its treasure positions using <code>CRC32</code> seeding</li>
+<li>Calculates treasure values (vertical * 1000 + horizontal)</li>
+<li>Feeds them into the <code>SetFlag</code> algorithm for XOR decryption</li>
+<li>Prints the decoded result</li>
+</ul>
+<p>Let's run it!</p>
+<p>Save the decoder to a file and execute it:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>freeski_decoder.py
+</code></pre></div>
+<p><img alt="First screenshot" src="../../img/objectives/o25/s4.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Mount Snow Flag!</p>
+<p><code>frosty_yet_predictably_random</code></p>
+</div>
+<p>Perfect name for a challenge where "random" treasure positions are actually frozen in place by deterministic <code>CRC32</code> seeding! The other six mountains decode to gibberish, confirming Mount Snow has the hidden treasure, or at least the flag we've been searching for for <em>HOURS</em>.</p>
+<p>And that's how you beat a skiing game without ever touching the slopes. Why risk crashing into trees when you can just reverse engineer the whole thing? Reverse engineering is <em>definitely</em> safer. Olivia would be proud! 🦆</p>
+<div class="admonition quote">
+<p class="admonition-title">Olivia</p>
+<p>Looks like you found your own way down that mountain... and maybe took a few shortcuts along the way. No judgment here—sometimes the clever path IS the right path. Now I'm one step closer to figuring out my own mystery. Thanks for the company, friend!</p>
+</div>
+<div class="nav-buttons">
+  <a href="/objectives/o24" class="nav-button nav-left">← Previous: On the Wire</a>
+  <a href="/objectives/o26" class="nav-button nav-right">Next: Snowblind Ambush →</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/Aeronique" target="_blank" rel="noopener" title="Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Aeronique" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/michelle-duell" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>
